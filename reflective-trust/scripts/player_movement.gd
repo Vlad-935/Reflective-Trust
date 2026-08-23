@@ -6,7 +6,6 @@ const STEP = 64
 const MOVE_DURATION = 0.3
 
 var direction: Vector2 = Vector2.ZERO
-var is_moving: bool = false
 
 @onready var Sprite: AnimatedSprite2D = get_node("AnimatedSprite2D")
 
@@ -16,14 +15,8 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	_get_direction()
 	
-	_handle_movement_buffer()
 	_move_player()
 
-
-func _handle_movement_buffer():
-	if is_moving:
-		await get_tree().create_timer(0.1).timeout
-		is_moving = false
 
 func _get_direction():
 	if Input.is_action_just_pressed("move left") and not $Raycasts/Right.is_colliding():
@@ -41,15 +34,10 @@ func _move_player():
 	if direction == Vector2.ZERO:
 		return
 	
-	if is_moving:
-		return
-	
 	var distance = direction * STEP
 	
 	global_position += distance
 	Sprite.global_position -= distance
 
 	var tween = create_tween()
-	tween.tween_property(Sprite, "global_position", global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
-
-	is_moving = true
+	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
