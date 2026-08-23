@@ -26,13 +26,13 @@ func _handle_movement_buffer():
 		is_moving = false
 
 func _get_direction():
-	if Input.is_action_just_pressed("move left"):
+	if Input.is_action_just_pressed("move left") and not $Raycasts/Right.is_colliding():
 		direction = Vector2(-1,0)
-	elif Input.is_action_just_pressed("move right"):
+	elif Input.is_action_just_pressed("move right") and not $Raycasts/Left.is_colliding():
 		direction = Vector2(1,0)
-	elif Input.is_action_just_pressed("move up"):
+	elif Input.is_action_just_pressed("move up") and not $Raycasts/Up.is_colliding():
 		direction = Vector2(0,-1)
-	elif Input.is_action_just_pressed("move down"):
+	elif Input.is_action_just_pressed("move down") and not $Raycasts/Down.is_colliding():
 		direction = Vector2(0,1)
 	else:
 		direction = Vector2.ZERO
