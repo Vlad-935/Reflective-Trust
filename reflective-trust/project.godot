@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [audio]
 
 buses/default_bus_layout="uid://qnylvhxt2ytm"
+"<<<<<<<HEAD[autoload]LevelManager"="*uid://bcg8l8ap7ua82"
+
+[autoload]
+
+LevelManager="*uid://b5nn6dmjtnsaf"
 
 [display]
 
