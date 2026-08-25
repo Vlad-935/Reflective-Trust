@@ -4,7 +4,6 @@ const UPPER_REFLECTION_MULTIPLIER = Vector2(1,-1)
 
 @onready var Nodes: Node2D = $Objects
 
-
 func _ready() -> void:
 	_duplicate_children()
 
@@ -24,7 +23,3 @@ func _mirrored_setup(new_child, child):
 	
 	new_child.position = child.position * UPPER_REFLECTION_MULTIPLIER
 	new_child.move_multiplier = Vector2(1,-1)
-
-	var Raycasts: Node2D = new_child.get_node("Raycasts")
-	for raycast in Raycasts.get_children(): 
-		raycast.target_position *= new_child.move_multiplier
