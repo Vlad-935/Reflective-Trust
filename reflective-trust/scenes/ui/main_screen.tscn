@@ -59,17 +59,14 @@ theme_override_styles/separator = SubResource("StyleBoxLine_ijygm")
 [node name="Play" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=825698153 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-
 text = "Play"
 
 [node name="Options" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=265908127 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-
 text = "Options"
 
 [node name="Quit" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=1353648743 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
-
 text = "Quit"
