@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bnymvvxplc7ah"]
 
 [ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="1_j5px3"]
+[ext_resource type="PackedScene" uid="uid://n461l8yo7wjj" path="res://scenes/camera.tscn" id="1_sqa0i"]
 [ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="2_twpsu"]
 [ext_resource type="PackedScene" uid="uid://bvkyebfwai1k0" path="res://scenes/moveable_object.tscn" id="3_lrqlo"]
 
@@ -99,8 +100,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.21176471, 0.23921569, 0.32156864, 1)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=743538275]
-zoom = Vector2(2, 2)
+[node name="Camera2D" parent="." unique_id=288577738 instance=ExtResource("1_sqa0i")]
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("1_j5px3")]
 move_multiplier = Vector2(1, -1)
