@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://7w3wrujreg2s"]
+
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_1ws2m"]
+[ext_resource type="PackedScene" uid="uid://c67r7smueu28p" path="res://scenes/ui/button.tscn" id="2_wxjlq"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ijygm"]
+color = Color(0, 0, 0, 0)
+
+[node name="Main_Screen" type="Control" unique_id=1325731135]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="." unique_id=1966761175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.765625, 0.44561768, 0.44561768, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=379338898]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1347923459]
+layout_mode = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=704289504]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer" unique_id=1440508336]
+layout_mode = 2
+theme = ExtResource("1_1ws2m")
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=432091987]
+layout_mode = 2
+text = "Game Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=1790958471]
+layout_mode = 2
+theme_override_constants/separation = 75
+theme_override_styles/separator = SubResource("StyleBoxLine_ijygm")
+
+[node name="Play" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=825698153 instance=ExtResource("2_wxjlq")]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=265908127 instance=ExtResource("2_wxjlq")]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=1353648743 instance=ExtResource("2_wxjlq")]
+layout_mode = 2
+text = "Quit"
