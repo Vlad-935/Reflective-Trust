@@ -18,7 +18,8 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	_get_direction()
 	
-	_move_player()
+	_get_collisions()
+	_move()
 
 
 func _player_setup():
@@ -32,43 +33,57 @@ func _player_setup():
 
 
 func _get_direction():
-	if Input.is_action_just_pressed("move left") and not $Raycasts/Right.is_colliding():
+	if Input.is_action_just_pressed("move left"):
 		direction = Vector2(-1,0)
-	elif Input.is_action_just_pressed("move right") and not $Raycasts/Left.is_colliding():
+	elif Input.is_action_just_pressed("move right"):
 		direction = Vector2(1,0)
-	elif Input.is_action_just_pressed("move up") and not $Raycasts/Up.is_colliding():
+	elif Input.is_action_just_pressed("move up"):
 		direction = Vector2(0,-1)
-	elif Input.is_action_just_pressed("move down") and not $Raycasts/Down.is_colliding():
+	elif Input.is_action_just_pressed("move down"):
 		direction = Vector2(0,1)
 	else:
 		direction = Vector2.ZERO
 
-func _move_player():
+func _move():
 	if direction == Vector2.ZERO:
 		return
 	
-	var distance = direction * STEP * move_multiplier	
-	if not _check_can_move(distance):
-		return
+	var distance = direction * STEP * move_multiplier
 	
-	last_position = position
+	var collisions = _get_collisions()
+	if collisions[direction] != null:
+		var object = collisions[direction]
+
+		if object.is_in_group("moveable") and object.try_move(distance):
+			object.move_object(distance)
+			
+		else:
+			return
+		
+		if object.is_in_group("wall"):
+			return
 	
+	_move_player(distance)
+	
+
+func _move_player(distance):
 	global_position += distance
 	Sprite.global_position -= distance
 
 	var tween = create_tween()
 	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
-	
 
-func _check_can_move(distance):
-	var space_state = get_world_2d().direct_space_state
-	var collider: Area2D = get_node("Area2D")
-	var shape = collider.get_node("CollisionShape2D").shape
+
+func _get_collisions():
+	var collisions: Dictionary[Vector2, Node2D] = {Vector2(1,0): null, Vector2(-1,0): null, Vector2(0,-1): null, Vector2(0,1): null}
 	
-	var query = PhysicsShapeQueryParameters2D.new()
-	query.shape = shape
-	query.transform = Transform2D(0, global_position + distance)
-	query.collision_mask = collider.collision_mask
+	var Raycasts: Node2D = get_node("Raycasts")
+	for raycast in Raycasts.get_children():
+		var collision: Node2D = null
+		if raycast.is_colliding():
+			collision = raycast.get_collider()
+		
+		var raycast_direction = raycast.target_position.normalized() * move_multiplier
+		collisions[raycast_direction] = collision
 	
-	var result = space_state.intersect_shape(query)
-	return result.is_empty()
+	return collisions

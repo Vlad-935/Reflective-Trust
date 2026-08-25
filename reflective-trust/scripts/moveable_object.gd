@@ -1,7 +1,9 @@
 extends StaticBody2D
 
+const INITIAL_POSITION = Vector2(64, 64)
+
 const STEP = 64
-var INITIAL_POSITION = Vector2(64, 64)
+const MOVE_DURATION = 0.3
 
 var is_moving: bool = false
 
@@ -9,9 +11,10 @@ var is_mirrored: bool = false
 var move_multiplier: Vector2 = Vector2(1,1)
 
 # Nodes
-@onready var Root: Node2D = get_parent().get_parent()
+@onready var Root: Node2D = get_parent().get_parent().get_parent()
 
-@onready var Player: CharacterBody2D = Root.get_parent().get_node("Player")
+@onready var Player: CharacterBody2D = Root.get_node("Player")
+@onready var Sprite: Sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,49 +23,24 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Player.direction == Vector2.ZERO:
-		is_moving = false
-	
-	if is_moving:
-		return
+	pass
 
-	var collision_direction = _get_collisions()
+func try_move(distance):
+	var space_state = get_world_2d().direct_space_state
+	var collider: Area2D = $Area2D
+	var shape = $Area2D/CollisionShape2D.shape
+	
+	var query = PhysicsShapeQueryParameters2D.new()
+	query.shape = shape
+	query.transform = Transform2D(0, global_position + distance)
+	query.collision_mask = collider.collision_mask
+	
+	var result = space_state.intersect_shape(query)
+	return result.is_empty()
 
-	if (
-		collision_direction["Right"][0] == "player" and not collision_direction["Left"][0] == "wall"
-		and Player.direction == Vector2(-1,0)
-	):
-		is_moving = true
-		
-	elif (
-		collision_direction["Left"][0] == "player" and not collision_direction["Right"][0] == "wall"
-		and Player.direction == Vector2(1,0)
-	):	
-		is_moving = true
-	
-	elif (
-		collision_direction["Up"][0] == "player" and not collision_direction["Down"][0] == "wall"
-		and Player.direction == Vector2(0,1)
-	):	
-		is_moving = true
-		
-	elif (collision_direction["Down"][0] == "player" and not collision_direction["Up"][0] == "wall"
-		and Player.direction == Vector2(0,-1)
-	):
-		is_moving = true
-		
-	if is_moving:
-		position += Player.direction * STEP * move_multiplier
+func move_object(distance):
+	global_position += distance
+	Sprite.global_position -= distance
 
-func _get_collisions():
-	var collision_direction: Dictionary[String, Array] = {"Right": [""], "Left": [""], "Up": [""], "Down": [""]}
-	
-	var Raycasts: Node2D = get_node("Raycasts")
-	for raycast in Raycasts.get_children():
-		var collision: Array = ["none"]
-		if raycast.is_colliding():
-			collision = raycast.get_collider().get_groups()
-		
-		collision_direction[raycast.name] = collision
-	
-	return collision_direction
+	var tween = create_tween()
+	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)

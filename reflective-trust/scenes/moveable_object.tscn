@@ -4,18 +4,31 @@
 [ext_resource type="Script" uid="uid://d0ow13ofspu1h" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
+size = Vector2(64, 64)
 
-[node name="Moveable_Object" type="StaticBody2D" unique_id=1409220653]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
+size = Vector2(32, 32)
+
+[node name="Moveable_Object" type="StaticBody2D" unique_id=1409220653 groups=["moveable"]]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 3
 script = ExtResource("1_sbsyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984777450]
-scale = Vector2(0.15625, 0.15625)
+modulate = Color(1, 0.84313726, 0, 1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_fygij")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818 groups=["moveable_object"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
 shape = SubResource("RectangleShape2D_ijygm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1585686691]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1167184355]
+shape = SubResource("RectangleShape2D_hjf4h")
+debug_color = Color(0.85772455, 0.30770534, 0.51397455, 0.41960785)
 
 [node name="Raycasts" type="Node2D" parent="." unique_id=2044226716]
 
