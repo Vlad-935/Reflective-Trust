@@ -11,6 +11,8 @@
 [node name="Camera2D" parent="." unique_id=288577738 instance=ExtResource("1_sqa0i")]
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("1_j5px3")]
+unique_name_in_owner = true
 move_multiplier = Vector2(1, -1)
 
 [node name="Player" parent="." unique_id=1030051535 instance=ExtResource("1_j5px3")]
+unique_name_in_owner = true
