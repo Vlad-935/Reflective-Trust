@@ -14,7 +14,7 @@ script = ExtResource("1_sbsyn")
 scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("1_fygij")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818 groups=["moveable_object"]]
 shape = SubResource("RectangleShape2D_ijygm")
 
 [node name="Raycasts" type="Node2D" parent="." unique_id=2044226716]

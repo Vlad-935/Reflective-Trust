@@ -5,6 +5,8 @@ const INITIAL_POSITION = Vector2(0,64)
 const STEP = 64
 const MOVE_DURATION = 0.3
 
+var last_position: Vector2 = Vector2.ZERO
+
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)
 
@@ -17,6 +19,7 @@ func _physics_process(_delta: float) -> void:
 	_get_direction()
 	
 	_move_player()
+
 
 func _player_setup():
 	# Mirroring the distance
@@ -44,10 +47,28 @@ func _move_player():
 	if direction == Vector2.ZERO:
 		return
 	
-	var distance = direction * STEP * move_multiplier
+	var distance = direction * STEP * move_multiplier	
+	if not _check_can_move(distance):
+		return
+	
+	last_position = position
 	
 	global_position += distance
 	Sprite.global_position -= distance
 
 	var tween = create_tween()
 	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
+	
+
+func _check_can_move(distance):
+	var space_state = get_world_2d().direct_space_state
+	var collider: Area2D = get_node("Area2D")
+	var shape = collider.get_node("CollisionShape2D").shape
+	
+	var query = PhysicsShapeQueryParameters2D.new()
+	query.shape = shape
+	query.transform = Transform2D(0, global_position + distance)
+	query.collision_mask = collider.collision_mask
+	
+	var result = space_state.intersect_shape(query)
+	return result.is_empty()

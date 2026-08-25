@@ -32,29 +32,27 @@ func _process(_delta: float) -> void:
 		collision_direction["Right"][0] == "player" and not collision_direction["Left"][0] == "wall"
 		and Player.direction == Vector2(-1,0)
 	):
-		position += Player.direction * STEP * move_multiplier
 		is_moving = true
 		
 	elif (
 		collision_direction["Left"][0] == "player" and not collision_direction["Right"][0] == "wall"
 		and Player.direction == Vector2(1,0)
 	):	
-		position += Player.direction * STEP * move_multiplier
 		is_moving = true
 	
 	elif (
 		collision_direction["Up"][0] == "player" and not collision_direction["Down"][0] == "wall"
 		and Player.direction == Vector2(0,1)
 	):	
-		position += Player.direction * STEP * move_multiplier
 		is_moving = true
 		
 	elif (collision_direction["Down"][0] == "player" and not collision_direction["Up"][0] == "wall"
 		and Player.direction == Vector2(0,-1)
 	):
-		position += Player.direction * STEP * move_multiplier
 		is_moving = true
-
+		
+	if is_moving:
+		position += Player.direction * STEP * move_multiplier
 
 func _get_collisions():
 	var collision_direction: Dictionary[String, Array] = {"Right": [""], "Left": [""], "Up": [""], "Down": [""]}
