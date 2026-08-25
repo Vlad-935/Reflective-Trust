@@ -20,8 +20,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vlq"]
 size = Vector2(64, 64)
 
-[node name="Player" type="CharacterBody2D" unique_id=2030126838]
-collision_mask = 5
+[node name="Player" type="CharacterBody2D" unique_id=2030126838 groups=["player"]]
+collision_mask = 6
 script = ExtResource("1_v6fml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587307255]
