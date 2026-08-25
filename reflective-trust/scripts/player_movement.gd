@@ -1,21 +1,34 @@
 extends CharacterBody2D
 
-const INITIAL_POSITION = Vector2(64,64)
-
 const STEP = 64
 const MOVE_DURATION = 0.3
 
+var initial_position = Vector2(0,64)
+
 var direction: Vector2 = Vector2.ZERO
+@export var move_multiplier: Vector2 = Vector2(1,1)
 
 @onready var Sprite: AnimatedSprite2D = get_node("AnimatedSprite2D")
 
 func _ready() -> void:
-	global_position = INITIAL_POSITION
+	_player_setup()
+	
+	global_position = initial_position
 
 func _physics_process(_delta: float) -> void:
 	_get_direction()
 	
 	_move_player()
+
+func _player_setup():
+	# Mirroring the distance
+	initial_position *= move_multiplier
+	
+	# Setting up the direction direction of the raycasts
+	$Raycasts/Right.target_position *= move_multiplier
+	$Raycasts/Left.target_position *= move_multiplier
+	$Raycasts/Up.target_position *= move_multiplier
+	$Raycasts/Down.target_position *= move_multiplier
 
 
 func _get_direction():
@@ -34,7 +47,7 @@ func _move_player():
 	if direction == Vector2.ZERO:
 		return
 	
-	var distance = direction * STEP
+	var distance = direction * STEP * move_multiplier
 	
 	global_position += distance
 	Sprite.global_position -= distance

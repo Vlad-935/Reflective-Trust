@@ -102,7 +102,10 @@ color = Color(0.21176471, 0.23921569, 0.32156864, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=743538275]
 zoom = Vector2(2, 2)
 
-[node name="Player" parent="." unique_id=2030126838 instance=ExtResource("1_j5px3")]
+[node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("1_j5px3")]
+move_multiplier = Vector2(1, -1)
+
+[node name="Player" parent="." unique_id=1030051535 instance=ExtResource("1_j5px3")]
 unique_name_in_owner = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=980813395]
