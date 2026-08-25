@@ -1,0 +1,28 @@
+[gd_resource type="Theme" format=3 uid="uid://dx8tcgjkekuak"]
+
+[ext_resource type="FontFile" uid="uid://cnbec7jsvupbh" path="res://assests/font/Daydream DEMO.otf" id="1_t7obm"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nmtsy"]
+color = Color(0.7411765, 0.14901961, 0.07058824, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5i3rh"]
+color = Color(0.7411765, 0.14901961, 0.07058824, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_lu702"]
+color = Color(0.14404413, 0.008989283, 0.002805369, 1)
+thickness = 10
+
+[resource]
+Button/colors/font_color = Color(0.7411765, 0.14901961, 0.07058824, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_t7obm")
+HBoxContainer/constants/separation = 32
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_nmtsy")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_5i3rh")
+HSlider/styles/slider = SubResource("StyleBoxLine_lu702")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_t7obm")
+OptionButton/font_sizes/font_size = 16
+VBoxContainer/constants/separation = 32

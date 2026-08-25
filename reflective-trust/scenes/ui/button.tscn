@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c67r7smueu28p"]
+
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_di1ux"]
+
+[node name="Button" type="Button" unique_id=825698153]
+custom_minimum_size = Vector2(400, 75)
+theme = ExtResource("1_di1ux")
+text = "Text"
