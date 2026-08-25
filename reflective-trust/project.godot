@@ -18,12 +18,12 @@ config/icon="res://icon.svg"
 [audio]
 
 buses/default_bus_layout="uid://qnylvhxt2ytm"
-"<<<<<<<HEAD[autoload]LevelManager"="*uid://bcg8l8ap7ua82"
 
 [autoload]
 
-LevelManager="*uid://b5nn6dmjtnsaf"
+LevelManager="*uid://bcg8l8ap7ua82"
 
+>>>>>>> e929639 (Added global level manager script)
 [display]
 
 window/size/viewport_width=1280
