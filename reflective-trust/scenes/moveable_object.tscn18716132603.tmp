@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bvkyebfwai1k0"]
+
+[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_fygij"]
+[ext_resource type="Script" uid="uid://d0ow13ofspu1h" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
+
+[node name="Moveable_Object" type="StaticBody2D" unique_id=1409220653]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_sbsyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984777450]
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_fygij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
+shape = SubResource("RectangleShape2D_ijygm")
+
+[node name="Raycasts" type="Node2D" parent="." unique_id=2044226716]
+
+[node name="Right" type="RayCast2D" parent="Raycasts" unique_id=366161562]
+target_position = Vector2(45, 0)
+collision_mask = 3
+
+[node name="Left" type="RayCast2D" parent="Raycasts" unique_id=1480822929]
+target_position = Vector2(-45, 0)
+collision_mask = 3
+
+[node name="Up" type="RayCast2D" parent="Raycasts" unique_id=1517845490]
+target_position = Vector2(0, -45)
+collision_mask = 3
+
+[node name="Down" type="RayCast2D" parent="Raycasts" unique_id=327603760]
+target_position = Vector2(0, 45)
+collision_mask = 3
