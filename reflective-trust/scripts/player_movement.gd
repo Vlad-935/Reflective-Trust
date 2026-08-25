@@ -23,10 +23,9 @@ func _player_setup():
 	global_position = INITIAL_POSITION * move_multiplier
 	
 	# Setting up the direction direction of the raycasts
-	$Raycasts/Right.target_position *= move_multiplier
-	$Raycasts/Left.target_position *= move_multiplier
-	$Raycasts/Up.target_position *= move_multiplier
-	$Raycasts/Down.target_position *= move_multiplier
+	var Raycasts: Node2D = get_node("Raycasts")
+	for raycast in Raycasts.get_children():
+		raycast.target_position *= move_multiplier
 
 
 func _get_direction():
