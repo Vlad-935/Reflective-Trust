@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://efy270suy001"]
 
-[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://bvme4bsi6vdnj" path="res://scripts/player_movement.gd" id="1_v6fml"]
+[ext_resource type="Texture2D" uid="uid://bu6tjxa4de1c3" path="res://assests/sprites/Player.jpeg" id="2_g2els"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ijygm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_p0vlq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_p0vlq")
+"texture": ExtResource("2_g2els")
 }],
 "loop": 1,
 "name": &"idle_front",
