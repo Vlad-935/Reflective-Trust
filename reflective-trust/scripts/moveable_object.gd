@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-const INITIAL_POSITION = Vector2(64, 48)
+const INITIAL_POSITION = Vector2(64, 0)
 
 const STEP = 64
 const MOVE_DURATION = 0.3

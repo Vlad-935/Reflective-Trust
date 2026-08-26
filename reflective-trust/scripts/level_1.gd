@@ -1,6 +1,6 @@
 extends Node2D
 
-const UPPER_REFLECTION_MULTIPLIER = Vector2(1,-1)
+const REFLECTION_MULTIPLIER = Vector2(-1,1)
 
 @onready var Nodes: Node2D = $Objects
 
@@ -21,5 +21,5 @@ func _duplicate_children():
 func _mirrored_setup(new_child, child):
 	new_child.is_mirrored = true
 	
-	new_child.position = child.position * UPPER_REFLECTION_MULTIPLIER
+	new_child.position = child.position * REFLECTION_MULTIPLIER
 	new_child.move_multiplier = Vector2(1,-1)
