@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Reflective Trust"
-run/main_scene="uid://bnymvvxplc7ah"
+run/main_scene="uid://7w3wrujreg2s"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="uid://qnylvhxt2ytm"
+"<<<<<<<HEAD[autoload]LevelManager"="*uid://bcg8l8ap7ua82"
 
 [autoload]
 
