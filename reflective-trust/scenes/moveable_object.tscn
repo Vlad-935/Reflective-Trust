@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://d0ow13ofspu1h" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
-size = Vector2(64, 64)
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [node name="Moveable_Object" type="StaticBody2D" unique_id=1409220653 groups=["moveable"]]
 collision_layer = 4
@@ -16,7 +16,7 @@ script = ExtResource("1_sbsyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984777450]
 modulate = Color(1, 0.84313726, 0, 1)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_fygij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
