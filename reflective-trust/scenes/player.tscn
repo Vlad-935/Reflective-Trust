@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://efy270suy001"]
 
 [ext_resource type="Script" uid="uid://bvme4bsi6vdnj" path="res://scripts/player_movement.gd" id="1_v6fml"]
-[ext_resource type="Texture2D" uid="uid://bu6tjxa4de1c3" path="res://assests/sprites/Player.jpeg" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://bul0gnc022mn7" path="res://assests/sprites/Isa.png" id="2_g2els"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ijygm"]
 animations = [{
@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vlq"]
-size = Vector2(64, 64)
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(16, 16)
@@ -25,7 +25,8 @@ collision_mask = 6
 script = ExtResource("1_v6fml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587307255]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, 2)
+scale = Vector2(0.075, 0.075)
 sprite_frames = SubResource("SpriteFrames_ijygm")
 animation = &"idle_front"
 frame_progress = 0.8176584
@@ -42,17 +43,17 @@ shape = SubResource("RectangleShape2D_ijygm")
 [node name="Raycasts" type="Node2D" parent="." unique_id=1848471344]
 
 [node name="Right" type="RayCast2D" parent="Raycasts" unique_id=1950724600]
-target_position = Vector2(-45, 0)
+target_position = Vector2(-25, 0)
 collision_mask = 6
 
 [node name="Left" type="RayCast2D" parent="Raycasts" unique_id=545073950]
-target_position = Vector2(45, 0)
+target_position = Vector2(25, 0)
 collision_mask = 6
 
 [node name="Up" type="RayCast2D" parent="Raycasts" unique_id=2107187331]
-target_position = Vector2(0, -45)
+target_position = Vector2(0, -25)
 collision_mask = 6
 
 [node name="Down" type="RayCast2D" parent="Raycasts" unique_id=1734095747]
-target_position = Vector2(0, 45)
+target_position = Vector2(0, 25)
 collision_mask = 6
