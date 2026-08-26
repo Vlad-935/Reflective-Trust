@@ -3,6 +3,8 @@
 [ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_1ws2m"]
 [ext_resource type="Script" uid="uid://2eyom8u8psl" path="res://scripts/ui/main_screen.gd" id="1_wxjlq"]
 [ext_resource type="PackedScene" uid="uid://c67r7smueu28p" path="res://scenes/ui/button.tscn" id="2_wxjlq"]
+[ext_resource type="Texture2D" uid="uid://bul0gnc022mn7" path="res://assests/sprites/Isa.png" id="4_lgxmk"]
+[ext_resource type="Texture2D" uid="uid://p0rapd83iun0" path="res://assests/sprites/Vlad.png" id="5_25c13"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ijygm"]
 color = Color(0, 0, 0, 0)
@@ -72,6 +74,52 @@ text = "Options"
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Quit"
+
+[node name="Player_Select" type="CenterContainer" parent="." unique_id=403956508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="Player_Select" unique_id=44059959]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player_Select" unique_id=2035266321]
+layout_mode = 2
+theme = ExtResource("1_1ws2m")
+
+[node name="Mari" type="Button" parent="Player_Select/HBoxContainer" unique_id=1424424071]
+custom_minimum_size = Vector2(350, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Mari"
+icon = ExtResource("4_lgxmk")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="VSeparator" type="VSeparator" parent="Player_Select/HBoxContainer" unique_id=976025620]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 75
+
+[node name="Vlad" type="Button" parent="Player_Select/HBoxContainer" unique_id=2135065045]
+custom_minimum_size = Vector2(350, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Vlad"
+icon = ExtResource("5_25c13")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
