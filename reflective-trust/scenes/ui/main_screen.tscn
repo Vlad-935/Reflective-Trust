@@ -124,3 +124,5 @@ expand_icon = true
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Player_Select/HBoxContainer/Mari" to="." method="_on_mari_pressed"]
+[connection signal="pressed" from="Player_Select/HBoxContainer/Vlad" to="." method="_on_vlad_pressed"]

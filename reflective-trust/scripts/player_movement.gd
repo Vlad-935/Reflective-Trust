@@ -10,7 +10,7 @@ var last_position: Vector2 = Vector2.ZERO
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)
 
-@onready var Sprite: AnimatedSprite2D = get_node("AnimatedSprite2D")
+@onready var Sprite: AnimatedSprite2D = get_node(PlayerData.Character)
 
 func _ready() -> void:
 	_player_setup()
@@ -23,6 +23,12 @@ func _physics_process(_delta: float) -> void:
 
 
 func _player_setup():
+	# Selecting Character
+	if PlayerData.Character == "Isa":
+		$Vlad.hide()
+	else:
+		$Isa.hide()
+	
 	# Mirroring the distance
 	global_position = INITIAL_POSITION * move_multiplier
 	
