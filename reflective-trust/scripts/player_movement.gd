@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const INITIAL_POSITION = Vector2(0,64)
+const INITIAL_POSITION = Vector2(0,16)
 
-const STEP = 64
-const MOVE_DURATION = 0.3
+const STEP = 32
+const MOVE_DURATION = 0.2
 
 var last_position: Vector2 = Vector2.ZERO
 
