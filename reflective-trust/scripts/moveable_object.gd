@@ -11,9 +11,9 @@ var is_mirrored: bool = false
 var move_multiplier: Vector2 = Vector2(1,1)
 
 # Nodes
-@onready var Root: Node2D = get_parent().get_parent().get_parent()
+@onready var Level: = get_parent().get_parent()
 
-@onready var Player: CharacterBody2D = Root.get_node("Player")
+@onready var Player: CharacterBody2D = Level.get_node("Player")
 @onready var Sprite: Sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.

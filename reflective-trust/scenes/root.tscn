@@ -1,25 +1,15 @@
 [gd_scene format=3 uid="uid://bnymvvxplc7ah"]
 
-[ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="1_j5px3"]
-[ext_resource type="PackedScene" uid="uid://cc0gkxeevxxmm" path="res://scenes/Levels/level_1.tscn" id="1_lrqlo"]
 [ext_resource type="PackedScene" uid="uid://n461l8yo7wjj" path="res://scenes/camera.tscn" id="1_sqa0i"]
 [ext_resource type="PackedScene" uid="uid://bu2425gbk22en" path="res://scenes/ui/pause_menu.tscn" id="4_sqa0i"]
+[ext_resource type="PackedScene" uid="uid://7w3wrujreg2s" path="res://scenes/ui/main_screen.tscn" id="5_jh1ax"]
 
 [node name="Root" type="Node2D" unique_id=1105190067]
 
-[node name="Level_Root" type="Node2D" parent="." unique_id=1575153181]
-
-[node name="Level_1" parent="Level_Root" unique_id=480054498 instance=ExtResource("1_lrqlo")]
-
-[node name="Player_Reflection" parent="Level_Root" unique_id=2030126838 instance=ExtResource("1_j5px3")]
-unique_name_in_owner = true
-move_multiplier = Vector2(1, -1)
-
-[node name="Player" parent="Level_Root" unique_id=1030051535 instance=ExtResource("1_j5px3")]
-unique_name_in_owner = true
-
 [node name="Camera2D" parent="." unique_id=288577738 instance=ExtResource("1_sqa0i")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1431016636]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1431016636]
 
-[node name="Pause_Menu" parent="CanvasLayer" unique_id=1414163954 instance=ExtResource("4_sqa0i")]
+[node name="Main_Screen" parent="UI" unique_id=1325731135 instance=ExtResource("5_jh1ax")]
+
+[node name="Pause_Menu" parent="UI" unique_id=1414163954 instance=ExtResource("4_sqa0i")]

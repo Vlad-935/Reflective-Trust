@@ -31,6 +31,9 @@ func _hide_options():
 
 
 func _input(event: InputEvent) -> void:
+	if not Settings.can_be_paused:
+		return
+	
 	if event.is_action_pressed("pause"):
 		if get_tree().paused:
 			if is_in_options:

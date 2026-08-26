@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Reflective Trust"
-run/main_scene="uid://7w3wrujreg2s"
+run/main_scene="uid://bnymvvxplc7ah"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,14 +23,15 @@ buses/default_bus_layout="uid://qnylvhxt2ytm"
 [autoload]
 
 LevelManager="*uid://bcg8l8ap7ua82"
-
->>>>>>> e929639 (Added global level manager script)
-[display]
-
-window/size/viewport_width=1280
+">>>>>>>e929639(Addedgloballevelmanagerscript)[display]window/size/viewport_width"=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+Settings="*uid://bga3b1vv4g8fg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [global_group]
 

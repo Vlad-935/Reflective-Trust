@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c1ba0pgcqnlk7" path="res://scripts/level_1.gd" id="1_3ydyl"]
 [ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_ac15f"]
 [ext_resource type="PackedScene" uid="uid://bvkyebfwai1k0" path="res://scenes/moveable_object.tscn" id="2_3ydyl"]
+[ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="4_x42e6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtxvj"]
 texture = ExtResource("1_ac15f")
@@ -73,7 +74,9 @@ sources/0 = SubResource("TileSetAtlasSource_vtxvj")
 [node name="Level_1" type="Node2D" unique_id=480054498]
 script = ExtResource("1_3ydyl")
 
-[node name="Container" type="Control" parent="." unique_id=1794528067]
+[node name="Map" type="Node2D" parent="." unique_id=579945086]
+
+[node name="Container" type="Control" parent="Map" unique_id=1794528067]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,7 +86,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ColorRect" type="ColorRect" parent="Container" unique_id=1206404489]
+[node name="ColorRect" type="ColorRect" parent="Map/Container" unique_id=1206404489]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -100,10 +103,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.21176471, 0.23921569, 0.32156864, 1)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=753232920 groups=["wall"]]
+[node name="TileMapLayer" type="TileMapLayer" parent="Map" unique_id=753232920 groups=["wall"]]
 tile_map_data = PackedByteArray("AADv//X/AAABAAAAAADw//X/AAABAAAAAADx//X/AAABAAAAAADy//X/AAABAAAAAADz//X/AAABAAAAAAD0//X/AAABAAAAAAD1//X/AAABAAAAAAD2//X/AAABAAAAAAD3//X/AAABAAAAAAD4//X/AAABAAAAAAD5//X/AAABAAAAAAD6//X/AAABAAAAAAD7//X/AAABAAAAAAD8//X/AAABAAAAAAD9//X/AAABAAAAAAD+//X/AAABAAAAAAD///X/AAABAAAAAAAAAPX/AAABAAAAAAABAPX/AAABAAAAAAACAPX/AAABAAAAAAADAPX/AAABAAAAAAAEAPX/AAABAAAAAAAFAPX/AAABAAAAAAAGAPX/AAABAAAAAAAHAPX/AAABAAAAAAAIAPX/AAABAAAAAAAJAPX/AAABAAAAAAAKAPX/AAABAAAAAAALAPX/AAABAAAAAAAMAPX/AAABAAAAAAANAPX/AAABAAAAAAAOAPX/AAABAAAAAAAPAPX/AAABAAAAAAAQAPX/AAABAAAAAADv/woAAAACAAcAAADw/woAAAAEAAcAAADx/woAAAAEAAcAAADy/woAAAAEAAcAAADz/woAAAAEAAcAAAD0/woAAAAEAAcAAAD1/woAAAAEAAcAAAD2/woAAAAEAAcAAAD3/woAAAAEAAcAAAD4/woAAAAEAAcAAAD5/woAAAAEAAcAAAD6/woAAAAEAAcAAAD7/woAAAAEAAcAAAD8/woAAAAEAAcAAAD9/woAAAAEAAcAAAD+/woAAAAEAAcAAAD//woAAAAEAAcAAAAAAAoAAAAEAAcAAAABAAoAAAAEAAcAAAACAAoAAAAEAAcAAAADAAoAAAAEAAcAAAAEAAoAAAAEAAcAAAAFAAoAAAAEAAcAAAAGAAoAAAAEAAcAAAAHAAoAAAAEAAcAAAAIAAoAAAAEAAcAAAAJAAoAAAAEAAcAAAAKAAoAAAAEAAcAAAALAAoAAAAEAAcAAAAMAAoAAAAEAAcAAAANAAoAAAAEAAcAAAAOAAoAAAAEAAcAAAAPAAoAAAAEAAcAAAAQAAoAAAAEAAcAAAATAPX/AAAHAAAAAAATAPf/AAAHAAIAAAATAPj/AAAHAAIAAAATAPn/AAAHAAIAAAATAPr/AAAHAAIAAAATAPv/AAAHAAIAAAATAPz/AAAHAAIAAAATAP3/AAAHAAIAAAATAP7/AAAHAAIAAAATAP//AAAHAAIAAAATAAAAAAAHAAIAAAATAAEAAAAHAAIAAAATAAIAAAAHAAIAAAATAAMAAAAHAAIAAAATAAQAAAAHAAIAAAATAAUAAAAHAAIAAAATAAYAAAAHAAIAAAATAAcAAAAHAAIAAAATAAgAAAAHAAIAAAATAAoAAAAHAAcAAADs//X/AAAAAAAAAADs//f/AAAAAAMAAADs//j/AAAAAAMAAADs//n/AAAAAAMAAADs//r/AAAAAAMAAADs//v/AAAAAAMAAADs//z/AAAAAAMAAADs//3/AAAAAAMAAADs//7/AAAAAAMAAADs////AAAAAAMAAADs/wAAAAAAAAMAAADs/wEAAAAAAAMAAADs/wIAAAAAAAMAAADs/wMAAAAAAAMAAADs/wQAAAAAAAMAAADs/wUAAAAAAAMAAADs/wYAAAAAAAMAAADs/wcAAAAAAAMAAADs/wgAAAAAAAMAAADs/woAAAAAAAcAAADt/woAAAACAAcAAADu/woAAAACAAcAAAARAAoAAAACAAcAAAASAAoAAAACAAcAAAATAAkAAAAHAAIAAAATAPb/AAAHAAIAAAARAPX/AAAGAAAAAAASAPX/AAAGAAAAAADs//b/AAAAAAMAAADs/wkAAAAAAAMAAADt//X/AAACAAAAAADu//X/AAACAAAAAAA=")
 tile_set = SubResource("TileSet_fkdrv")
 
 [node name="Objects" type="Node2D" parent="." unique_id=840091501]
 
 [node name="Moveable_Object" parent="Objects" unique_id=1409220653 instance=ExtResource("2_3ydyl")]
+
+[node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("4_x42e6")]
+unique_name_in_owner = true
+move_multiplier = Vector2(1, -1)
+
+[node name="Player" parent="." unique_id=689533502 instance=ExtResource("4_x42e6")]
+unique_name_in_owner = true
