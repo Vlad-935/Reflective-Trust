@@ -25,9 +25,18 @@ func _physics_process(_delta: float) -> void:
 func _player_setup():
 	# Selecting Character
 	if PlayerData.Character == "Isa":
-		$Vlad.hide()
+		if move_multiplier == Vector2(1,1):
+			$Vlad.hide()
+		else:
+			$Isa.hide()
+			Sprite = get_node("Vlad")
+	
 	else:
-		$Isa.hide()
+		if move_multiplier == Vector2(1,1):
+			$Isa.hide()
+		else:
+			$Vlad.hide()
+			Sprite = get_node("Isa")
 	
 	# Mirroring the distance
 	global_position = INITIAL_POSITION * move_multiplier
