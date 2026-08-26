@@ -23,10 +23,6 @@ buses/default_bus_layout="uid://qnylvhxt2ytm"
 [autoload]
 
 LevelManager="*uid://bcg8l8ap7ua82"
-">>>>>>>e929639(Addedgloballevelmanagerscript)[display]window/size/viewport_width"=1280
-window/size/viewport_height=720
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 Settings="*uid://bga3b1vv4g8fg"
 
 [display]
