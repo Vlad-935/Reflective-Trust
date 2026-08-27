@@ -3,9 +3,8 @@ extends CharacterBody2D
 const INITIAL_POSITION = Vector2(32,0)
 
 const STEP = 32
-const MOVE_DURATION = 0.2
+const MOVE_DURATION = 1
 
-var last_position: Vector2 = Vector2.ZERO
 
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)
@@ -79,14 +78,14 @@ func _move():
 			return
 	
 	_move_player(distance)
-	
+
 
 func _move_player(distance):
 	global_position += distance
 	Sprite.global_position -= distance
 
 	var tween = create_tween()
-	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
+	tween.tween_property(Sprite, "global_position", self.global_position + Vector2(0,2), MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 
 
 func _get_collisions():
