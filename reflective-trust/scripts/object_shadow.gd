@@ -3,11 +3,15 @@ extends Line2D
 @onready var Moveable_Object: AnimatableBody2D = get_parent()
 @onready var Object_Sprite: Sprite2D = Moveable_Object.get_node("Sprite2D")
 
+@onready var BaW_Shader: Shader = preload("res://assests/shaders/black_and_white.gdshader")
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == Moveable_Object:
 		return
 	
 	if body.is_in_group("player"):
+		var Sprite = body.find_child("*Sprite")
+		Sprite.material.set_shader_parameter("active", true)
 		return
 		
 	body.get_node("Sprite2D").hide()
@@ -16,6 +20,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		var Sprite = body.find_child("*Sprite")
+		Sprite.material.set_shader_parameter("active", false)
 		return
 		
 	body.get_node("Sprite2D").show()

@@ -9,7 +9,7 @@ const MOVE_DURATION = 1
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)
 
-@onready var Sprite: AnimatedSprite2D = get_node(PlayerData.Character)
+@onready var Sprite: AnimatedSprite2D = get_node(PlayerData.Character + " - Sprite")
 
 func _ready() -> void:
 	_player_setup()
@@ -25,17 +25,17 @@ func _player_setup():
 	# Selecting Character
 	if PlayerData.Character == "Isa":
 		if move_multiplier == Vector2(1,1):
-			$Vlad.hide()
+			$"Vlad - Sprite".hide()
 		else:
-			$Isa.hide()
-			Sprite = get_node("Vlad")
+			$"Isa - Sprite".hide()
+			Sprite = get_node("Vlad - Sprite")
 	
 	else:
 		if move_multiplier == Vector2(1,1):
-			$Isa.hide()
+			$"Isa - Sprite".hide()
 		else:
-			$Vlad.hide()
-			Sprite = get_node("Isa")
+			$"Vlad - Sprite".hide()
+			Sprite = get_node("Isa - Sprite")
 	
 	# Mirroring the distance
 	global_position = INITIAL_POSITION * move_multiplier
