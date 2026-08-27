@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-const INITIAL_POSITION = Vector2(64, 0)
+@export var INITIAL_POSITION = Vector2(64, 0)
 
 const STEP = 64
 const MOVE_DURATION = 0.3
@@ -41,6 +41,15 @@ func try_move(distance):
 func move_object(distance):
 	global_position += distance
 	Sprite.global_position -= distance
+	
+	if is_mirrored:
+		var Shadow = get_node("Shadow")
+		Shadow.global_position -= distance
+		
+		var shadow_tween = create_tween()
+		shadow_tween.tween_property(Shadow, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
+		
+		
 
 	var tween = create_tween()
 	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)

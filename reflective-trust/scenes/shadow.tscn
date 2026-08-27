@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dwgnlj4ncftr6"]
+
+[ext_resource type="Script" uid="uid://c07aysl3p60tn" path="res://scripts/object_shadow.gd" id="1_0rvn4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5270r"]
+size = Vector2(483, 16)
+
+[node name="Shadow" type="Line2D" unique_id=1330850732]
+points = PackedVector2Array(16, 0, -500, 0)
+width = 32.0
+default_color = Color(0, 0, 0, 1)
+script = ExtResource("1_0rvn4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1521127525]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=583668929]
+position = Vector2(-258.5, 0)
+shape = SubResource("RectangleShape2D_5270r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
