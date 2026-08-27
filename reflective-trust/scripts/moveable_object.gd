@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends AnimatableBody2D
 
 @export var INITIAL_POSITION = Vector2(64, 0)
 

@@ -114,6 +114,7 @@ position = Vector2(144, 37)
 
 [node name="Moveable_Object2" parent="Objects" unique_id=1092965479 instance=ExtResource("2_3ydyl")]
 position = Vector2(192, -64)
+collision_mask = 15
 INITIAL_POSITION = Vector2(192, -64)
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("4_x42e6")]

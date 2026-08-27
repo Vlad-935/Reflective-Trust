@@ -9,9 +9,10 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
 size = Vector2(16, 16)
 
-[node name="Moveable_Object" type="StaticBody2D" unique_id=1409220653 groups=["moveable"]]
-collision_layer = 4
-collision_mask = 3
+[node name="Moveable_Object" type="AnimatableBody2D" unique_id=901920368 groups=["moveable"]]
+collision_layer = 20
+collision_mask = 15
+sync_to_physics = false
 script = ExtResource("1_sbsyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984777450]
@@ -24,7 +25,7 @@ shape = SubResource("RectangleShape2D_ijygm")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1585686691]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1167184355]
 shape = SubResource("RectangleShape2D_hjf4h")
