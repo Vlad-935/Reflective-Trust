@@ -26,3 +26,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	reflection.find_child("*Sprite").hide()
 	body.find_child("*Sprite").hide()
+	
+	await get_tree().create_timer(1).timeout
+	LevelManager.restart_level()

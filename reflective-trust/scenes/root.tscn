@@ -6,8 +6,6 @@
 
 [node name="Root" type="Node2D" unique_id=1105190067]
 
-[node name="Level_root" type="Node2D" parent="." unique_id=556304510]
-
 [node name="Camera2D" parent="." unique_id=288577738 instance=ExtResource("1_sqa0i")]
 unique_name_in_owner = true
 

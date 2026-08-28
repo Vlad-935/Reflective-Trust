@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	_camera_shake(delta)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("reset level") and not LevelManager.is_restarting:
 		add_shake(5)
 
 

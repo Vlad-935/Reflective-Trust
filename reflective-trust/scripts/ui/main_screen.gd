@@ -41,6 +41,7 @@ func _start_game():
 	# Load first level
 	var scene = first_level_scene.instantiate()
 	Root.add_child(scene)
+	scene.name = "Level_root"
 
 	# Delete main screen
 	self.queue_free()
