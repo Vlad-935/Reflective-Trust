@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cbmfwep8i54la"]
+
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_41vld"]
+[ext_resource type="Script" uid="uid://coeq4rkt5scbx" path="res://scripts/ui/options.gd" id="2_hbsxq"]
+[ext_resource type="PackedScene" uid="uid://c67r7smueu28p" path="res://scenes/ui/button.tscn" id="3_yvaj8"]
+
+[sub_resource type="GDScript" id="GDScript_odiyu"]
+script/source = "extends HSlider
+
+func _ready() -> void:
+	value = AudioManager.master_volume
+
+func _on_value_changed(sound_value: float) -> void:
+	AudioManager.set_master_volume(sound_value)
+"
+
+[node name="OptionsButtons" type="VBoxContainer" unique_id=960968184]
+theme = ExtResource("1_41vld")
+script = ExtResource("2_hbsxq")
+
+[node name="Label" type="Label" parent="." unique_id=1529056138]
+layout_mode = 2
+theme = ExtResource("1_41vld")
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Master" type="HBoxContainer" parent="." unique_id=557830339]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Master" unique_id=1826822840]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Master"
+
+[node name="HSlider" type="HSlider" parent="Master" unique_id=297285712]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("1_41vld")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = SubResource("GDScript_odiyu")
+
+[node name="Music" type="HBoxContainer" parent="." unique_id=1883376712]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Music" unique_id=289554147]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Music"
+
+[node name="HSlider" type="HSlider" parent="Music" unique_id=1763259553]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("1_41vld")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = SubResource("GDScript_odiyu")
+
+[node name="Sound" type="HBoxContainer" parent="." unique_id=254952307]
+layout_mode = 2
+theme = ExtResource("1_41vld")
+
+[node name="Label" type="Label" parent="Sound" unique_id=1043826904]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Sound"
+
+[node name="HSlider" type="HSlider" parent="Sound" unique_id=709817499]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("1_41vld")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = SubResource("GDScript_odiyu")
+
+[node name="Fullscreen" type="HBoxContainer" parent="." unique_id=1971439510]
+layout_mode = 2
+theme = ExtResource("1_41vld")
+
+[node name="Label" type="Label" parent="Fullscreen" unique_id=1816864776]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Fullscreen"
+
+[node name="CheckBox" type="CheckBox" parent="Fullscreen" unique_id=822098171]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme = ExtResource("1_41vld")
+
+[node name="Resolution" type="HBoxContainer" parent="." unique_id=427307124]
+layout_mode = 2
+theme = ExtResource("1_41vld")
+
+[node name="Label" type="Label" parent="Resolution" unique_id=1604995269]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Resolution"
+
+[node name="OptionButton" type="OptionButton" parent="Resolution" unique_id=851202999]
+layout_mode = 2
+theme = ExtResource("1_41vld")
+alignment = 1
+selected = 1
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1280x720"
+popup/item_1/id = 1
+popup/item_2/text = "720x480"
+popup/item_2/id = 2
+
+[node name="Back" parent="." unique_id=825698153 instance=ExtResource("3_yvaj8")]
+layout_mode = 2
+text = "Back"
+
+[connection signal="value_changed" from="Master/HSlider" to="Master/HSlider" method="_on_value_changed"]

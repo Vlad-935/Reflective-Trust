@@ -4,12 +4,16 @@ extends Control
 
 @onready var first_level_scene: PackedScene = preload("res://scenes/levels/level_1.tscn") 
 
+@onready var Main_Screen: PanelContainer = $MainScreen
 @onready var Player_Select: CenterContainer = $Player_Select
+@onready var Options: PanelContainer = $Options
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Settings.can_be_paused = false
+	DisplayManager.can_be_paused = false
+	Main_Screen.show()
 	Player_Select.hide()
+	Options.hide()
 
 
 func _on_play_pressed() -> void:
@@ -17,8 +21,8 @@ func _on_play_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	pass
-
+	Main_Screen.hide()
+	Options.show()
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
@@ -45,6 +49,11 @@ func _start_game():
 
 	# Delete main screen
 	self.queue_free()
-	Settings.can_be_paused = true
+	DisplayManager.can_be_paused = true
 	
 	Loading.fade_out()
+
+
+func _on_back_pressed() -> void:
+	Options.hide()
+	Main_Screen.show()

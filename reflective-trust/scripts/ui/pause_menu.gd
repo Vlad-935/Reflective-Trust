@@ -5,7 +5,6 @@ var is_in_options: bool = false
 @onready var PausedButtons: VBoxContainer = $CenterContainer/PausedButtons
 @onready var OptionsButtons: VBoxContainer = $CenterContainer/OptionsButtons
 
-
 func _ready() -> void:
 	_hide_options()
 	_resume_game()
@@ -31,7 +30,7 @@ func _hide_options():
 
 
 func _input(event: InputEvent) -> void:
-	if not Settings.can_be_paused:
+	if not DisplayManager.can_be_paused:
 		return
 	
 	if event.is_action_pressed("pause"):

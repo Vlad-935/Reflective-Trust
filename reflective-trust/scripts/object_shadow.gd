@@ -19,7 +19,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 	body.get_node("Sprite2D").hide()
 	
-	if body.get_node("Shadow"):
+	if body.get_node("Shadow") != null:
 		body.get_node("Shadow").get_node("Area2D").set_collision_mask_value(1, false)
 	
 	if body.is_in_group("moveable"):
@@ -42,7 +42,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	body.get_node("Sprite2D").show()
 	
 	# Enable Shadow
-	if body.get_node("Shadow"):
+	if body.get_node("Shadow") != null:
 		body.get_node("Shadow").get_node("Area2D").set_collision_mask_value(1, true)
 	
 	# Enable Objects
