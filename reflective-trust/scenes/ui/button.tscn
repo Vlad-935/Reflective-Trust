@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://c67r7smueu28p"]
 
 [ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_di1ux"]
+[ext_resource type="Script" uid="uid://dwlcbe5r3ikv" path="res://scripts/ui/button.gd" id="2_vgxan"]
+[ext_resource type="AudioStream" uid="uid://cdvbuvdk2fv1i" path="res://assests/audio/Select sound.mp3" id="3_mrrss"]
 
 [node name="Button" type="Button" unique_id=825698153]
 custom_minimum_size = Vector2(400, 75)
 theme = ExtResource("1_di1ux")
 text = "Text"
+script = ExtResource("2_vgxan")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=139796974]
+stream = ExtResource("3_mrrss")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

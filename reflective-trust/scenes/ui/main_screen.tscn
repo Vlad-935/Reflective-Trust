@@ -96,7 +96,6 @@ color = Color(0, 0, 0, 0.39215687)
 layout_mode = 2
 
 [node name="Player_Select" type="CenterContainer" parent="." unique_id=403956508]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -113,11 +112,9 @@ color = Color(0, 0, 0, 1)
 layout_mode = 2
 theme = ExtResource("1_1ws2m")
 
-[node name="Mari" type="Button" parent="Player_Select/HBoxContainer" unique_id=1424424071]
+[node name="Mari" parent="Player_Select/HBoxContainer" unique_id=1278033781 instance=ExtResource("2_wxjlq")]
 custom_minimum_size = Vector2(350, 450)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 text = "Mari"
 icon = ExtResource("4_lgxmk")
 autowrap_mode = 3
@@ -130,11 +127,9 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 75
 
-[node name="Vlad" type="Button" parent="Player_Select/HBoxContainer" unique_id=2135065045]
+[node name="Vlad" parent="Player_Select/HBoxContainer" unique_id=504058260 instance=ExtResource("2_wxjlq")]
 custom_minimum_size = Vector2(350, 450)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 text = "Vlad"
 icon = ExtResource("5_25c13")
 autowrap_mode = 3
