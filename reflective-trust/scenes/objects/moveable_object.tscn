@@ -10,6 +10,7 @@ size = Vector2(32, 32)
 size = Vector2(16, 16)
 
 [node name="Moveable_Object" type="AnimatableBody2D" unique_id=901920368 groups=["moveable"]]
+modulate = Color(0.1812501, 1, 0, 1)
 collision_layer = 20
 collision_mask = 0
 sync_to_physics = false
@@ -22,6 +23,7 @@ texture = ExtResource("1_fygij")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
 shape = SubResource("RectangleShape2D_ijygm")
+debug_color = Color(0.087500095, 1, 0, 0.41960785)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1585686691]
 collision_layer = 4
@@ -29,4 +31,3 @@ collision_mask = 39
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1167184355]
 shape = SubResource("RectangleShape2D_hjf4h")
-debug_color = Color(0.85772455, 0.30770534, 0.51397455, 0.41960785)
