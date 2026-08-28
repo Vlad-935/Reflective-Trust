@@ -16,12 +16,16 @@ thickness = 10
 
 [resource]
 Button/colors/font_color = Color(0.7411765, 0.14901961, 0.07058824, 1)
+Button/colors/font_outline_color = Color(0.29538032, 0.03492544, 0.010899505, 1)
+Button/constants/outline_size = 40
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_t7obm")
 HBoxContainer/constants/separation = 32
 HSlider/styles/grabber_area = SubResource("StyleBoxLine_nmtsy")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_5i3rh")
 HSlider/styles/slider = SubResource("StyleBoxLine_lu702")
+Label/colors/font_outline_color = Color(0.16874999, 0.16874999, 0.16874999, 1)
+Label/constants/outline_size = 25
 Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_t7obm")
 OptionButton/font_sizes/font_size = 16
