@@ -24,8 +24,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	body.find_child("CPU*").emitting = true
 	reflection.find_child("CPU*").emitting = true
 	
+	reflection.can_move = false
+	body.can_move = false
+	
 	reflection.find_child("*Sprite").hide()
 	body.find_child("*Sprite").hide()
+	
+	
 	
 	await get_tree().create_timer(1).timeout
 	LevelManager.restart_level()

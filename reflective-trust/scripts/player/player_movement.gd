@@ -6,6 +6,7 @@ const STEP = 32
 const MOVE_DURATION = 1
 
 var is_dead: bool = false
+var can_move: bool = true
 
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)
@@ -62,6 +63,10 @@ func _get_direction():
 		direction = Vector2.ZERO
 
 func _move():
+	if not can_move:
+		direction = Vector2.ZERO
+		return
+	
 	if direction == Vector2.ZERO:
 		return
 	
