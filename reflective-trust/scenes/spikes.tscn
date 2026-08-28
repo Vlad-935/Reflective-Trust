@@ -10,7 +10,6 @@ size = Vector2(32, 32)
 
 [node name="Spikes" type="StaticBody2D" unique_id=1274487235]
 collision_layer = 48
-collision_mask = 5
 script = ExtResource("1_xbcdo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514720841]

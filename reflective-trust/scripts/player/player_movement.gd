@@ -5,6 +5,7 @@ const INITIAL_POSITION = Vector2(32,0)
 const STEP = 32
 const MOVE_DURATION = 1
 
+var is_dead: bool = false
 
 var direction: Vector2 = Vector2.ZERO
 @export var move_multiplier: Vector2 = Vector2(1,1)

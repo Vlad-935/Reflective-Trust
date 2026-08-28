@@ -10,19 +10,33 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		return
 	
 	if body.is_in_group("player"):
+		if body.is_dead:
+			return
+			
 		var Sprite = body.find_child("*Sprite")
 		Sprite.material.set_shader_parameter("active", true)
 		return
 		
 	body.get_node("Sprite2D").hide()
-	body.set_collision_layer_value(3, false)
+	
+	if body.is_in_group("moveable"):
+		body.set_collision_layer_value(3, false)
+	else:
+		body.get_node("Area2D").set_collision_mask_value(1, false)
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		if body.is_dead:
+			return
+			
 		var Sprite = body.find_child("*Sprite")
 		Sprite.material.set_shader_parameter("active", false)
 		return
-		
+	
 	body.get_node("Sprite2D").show()
-	body.set_collision_layer_value(3, true)
+	
+	if body.is_in_group("moveable"):
+		body.set_collision_layer_value(3, true)
+	else:
+		body.get_node("Area2D").set_collision_mask_value(1, true)

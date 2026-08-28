@@ -127,11 +127,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vlq"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
-size = Vector2(16, 16)
-
 [node name="Player" type="CharacterBody2D" unique_id=2030126838 groups=["player"]]
-collision_mask = 6
+collision_mask = 0
 script = ExtResource("1_v6fml")
 
 [node name="StateMachine" type="Node" parent="." unique_id=134836641]
@@ -156,12 +153,6 @@ autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=47020811]
 shape = SubResource("RectangleShape2D_p0vlq")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1937630260]
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1039708994]
-shape = SubResource("RectangleShape2D_ijygm")
 
 [node name="Raycasts" type="Node2D" parent="." unique_id=1848471344]
 

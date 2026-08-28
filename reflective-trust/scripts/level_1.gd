@@ -2,24 +2,27 @@ extends Node2D
 
 const REFLECTION_MULTIPLIER = Vector2(-1,1)
 
-@onready var Nodes: Node2D = $Objects
+@onready var Objects: Node2D = $Objects
+@onready var Spikes: Node2D = $Spikes
+
 @onready var Shadow_Scene: PackedScene = preload("res://scenes/shadow.tscn")
 
 func _ready() -> void:
-	_duplicate_children()
+	_duplicate_objects(Objects, true)
+	_duplicate_objects(Spikes, false)
 
 
-func _duplicate_children():
-	for child in Nodes.get_children():
+func _duplicate_objects(folder, add_shadow):
+	for child in folder.get_children():
 		var path = child.get_scene_file_path() 
 		var scene = load(path)
 		
 		var new_child = scene.instantiate()
-		Nodes.add_child(new_child)
+		folder.add_child(new_child)
 		
-		_mirrored_setup(new_child, child)
+		_mirrored_setup(new_child, child, add_shadow)
 
-func _mirrored_setup(reflection, child):
+func _mirrored_setup(reflection, child, add_shadow):
 	reflection.is_mirrored = true
 	
 	# Position Reflection
@@ -27,6 +30,7 @@ func _mirrored_setup(reflection, child):
 	reflection.move_multiplier = Vector2(1,-1)
 	
 	# Add Shadow
-	var shadow = Shadow_Scene.instantiate()
-	reflection.add_child(shadow)
-	reflection.move_child(shadow, 0)
+	if add_shadow:
+		var shadow = Shadow_Scene.instantiate()
+		reflection.add_child(shadow)
+		reflection.move_child(shadow, 0)

@@ -120,7 +120,7 @@ INITIAL_POSITION = Vector2(192, -64)
 [node name="Spikes" type="Node2D" parent="." unique_id=68909879]
 
 [node name="Spikes" parent="Spikes" unique_id=639759395 instance=ExtResource("4_6761a")]
-position = Vector2(-43, -84)
+position = Vector2(93, -92)
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("4_x42e6")]
 unique_name_in_owner = true
