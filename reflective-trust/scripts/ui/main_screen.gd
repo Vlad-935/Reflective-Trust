@@ -4,7 +4,6 @@ extends Control
 
 @onready var first_level_scene: PackedScene = preload("res://scenes/levels/level_1.tscn") 
 
-@onready var Loading_Screen: Control = $"../Loading"
 @onready var Player_Select: CenterContainer = $Player_Select
 
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +36,7 @@ func _on_vlad_pressed() -> void:
 
 func _start_game():
 	# Fade in
-	await Loading_Screen.fade_in()
+	await Loading.fade_in()
 	
 	# Load first level
 	var scene = first_level_scene.instantiate()
@@ -47,4 +46,4 @@ func _start_game():
 	self.queue_free()
 	Settings.can_be_paused = true
 	
-	Loading_Screen.fade_out()
+	Loading.fade_out()

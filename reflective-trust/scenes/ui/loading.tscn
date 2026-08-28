@@ -1,18 +1,8 @@
 [gd_scene format=3 uid="uid://b7buy2mr51hrp"]
 
-[ext_resource type="Script" uid="uid://p88r3i0i53oj" path="res://scripts/ui/loading.gd" id="1_35gka"]
-
-[node name="Loading" type="Control" unique_id=713372028]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_35gka")
+[node name="Loading" type="CanvasLayer" unique_id=1216263050]
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1717503021]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

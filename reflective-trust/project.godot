@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://qnylvhxt2ytm"
 LevelManager="*uid://bcg8l8ap7ua82"
 Settings="*uid://bga3b1vv4g8fg"
 PlayerData="*uid://cuyw1b1oy5re5"
+Loading="*uid://p88r3i0i53oj"
 
 [display]
 
