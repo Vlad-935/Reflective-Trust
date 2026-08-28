@@ -176,7 +176,7 @@ collision_mask = 6
 target_position = Vector2(0, 25)
 collision_mask = 6
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1530876677]
+[node name="Particles - Blood" type="CPUParticles2D" parent="." unique_id=1530876677]
 position = Vector2(0, -4)
 emitting = false
 amount = 30
@@ -196,3 +196,24 @@ scale_amount_min = 2.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_d2wvv")
 color = Color(0.821875, 0.03595702, 0.03595702, 1)
+
+[node name="Particles - Win" type="CPUParticles2D" parent="." unique_id=1759484989]
+position = Vector2(0, -4)
+emitting = false
+amount = 30
+lifetime = 0.75
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 15.0
+direction = Vector2(20, 20)
+spread = 180.0
+gravity = Vector2(0, 500)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_d2wvv")
+color = Color(0.9661256, 1, 0.021875024, 1)

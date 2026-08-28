@@ -17,7 +17,6 @@ func _physics_process(_delta: float) -> void:
 	var direction_changed = _get_direction()
 	
 	if state_changed == true or direction_changed == true:
-		print(current_state, direction)
 		_set_animation()
 
 func _get_state():

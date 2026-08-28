@@ -22,6 +22,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("moveable"):
 		body.set_collision_layer_value(3, false)
 	else:
+		body.set_collision_layer_value(6, false)
 		body.get_node("Area2D").set_collision_mask_value(1, false)
 
 
@@ -39,4 +40,5 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("moveable"):
 		body.set_collision_layer_value(3, true)
 	else:
+		body.set_collision_layer_value(6, true)
 		body.get_node("Area2D").set_collision_mask_value(1, true)

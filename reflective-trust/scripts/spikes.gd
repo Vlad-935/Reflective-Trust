@@ -15,14 +15,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	Camera.add_shake(5)
 	
 	# Delete Characters
-	body.is_dead = true
-	
 	var reflection = body.get_parent().get_node("Player_Reflection")
 	body = reflection.get_parent().get_node("Player")
 	
+	body.is_dead = true
+	reflection.is_dead = true
+	
 	# Blood
-	body.find_child("CPU*").emitting = true
-	reflection.find_child("CPU*").emitting = true
+	body.find_child("*Blood").emitting = true
+	reflection.find_child("*Blood").emitting = true
 	
 	reflection.can_move = false
 	body.can_move = false
@@ -30,7 +31,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	reflection.find_child("*Sprite").hide()
 	body.find_child("*Sprite").hide()
 	
-	
-	
+	# Reset Level
 	await get_tree().create_timer(1).timeout
 	LevelManager.restart_level()
