@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ccsrphxj1lmon" path="res://assests/sprites/Vlad/Walk/Side/Vlad 1.png" id="13_fulsm"]
 [ext_resource type="Texture2D" uid="uid://drgjpemxy05of" path="res://assests/sprites/Vlad/Walk/Side/Vlad 2.png" id="14_4r5pv"]
 [ext_resource type="Texture2D" uid="uid://biejwonqomr34" path="res://assests/sprites/Vlad/Walk/Side/Vlad 3.png" id="15_60mlk"]
+[ext_resource type="AudioStream" uid="uid://b2affcxrdif6j" path="res://assests/audio/Death sound.mp3" id="16_a8ls1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y4r1p"]
 shader = ExtResource("1_y4r1p")
@@ -234,3 +235,7 @@ scale_amount_min = 2.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_d2wvv")
 color = Color(0.9661256, 1, 0.021875024, 1)
+
+[node name="Sound - Death" type="AudioStreamPlayer2D" parent="." unique_id=740123747]
+stream = ExtResource("16_a8ls1")
+bus = &"Sound"
