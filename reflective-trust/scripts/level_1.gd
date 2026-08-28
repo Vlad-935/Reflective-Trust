@@ -5,6 +5,7 @@ const REFLECTION_MULTIPLIER = Vector2(-1,1)
 @onready var Objects: Node2D = $Objects
 @onready var Spikes: Node2D = $Spikes
 @onready var Doors: Node2D = $Doors
+@onready var Walls: Node2D = $Walls
 
 @onready var Shadow_Scene: PackedScene = preload("res://scenes/shadow.tscn")
 
@@ -12,7 +13,7 @@ func _ready() -> void:
 	_duplicate_objects(Objects, true)
 	_duplicate_objects(Spikes, false)
 	_duplicate_objects(Doors, false)
-
+	_duplicate_objects(Walls, true)
 
 func _duplicate_objects(folder, add_shadow):
 	for child in folder.get_children():
