@@ -15,8 +15,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	body = reflection.get_parent().get_node("Player")
 	
 	# Win Particles
-	body.find_child("*Win").emitting = true
-	reflection.find_child("*Win").emitting = true
+	body.get_node("Particles").find_child("*Win").emitting = true
+	reflection.get_node("Particles").find_child("*Win").emitting = true
+	
+	var sound = body.get_node("Sounds").find_child("*Win")
+	sound.play()
 	
 	reflection.can_move = false
 	body.can_move = false

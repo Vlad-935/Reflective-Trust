@@ -22,11 +22,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	reflection.is_dead = true
 	
 	# Blood
-	body.find_child("*Blood").emitting = true
-	reflection.find_child("*Blood").emitting = true
+	body.get_node("Particles").find_child("*Blood").emitting = true
+	reflection.get_node("Particles").find_child("*Blood").emitting = true
 	
 	# Play death sound
-	var sound = body.get_node("Sound - Death")
+	var sound = body.get_node("Sounds").find_child("*Death")
 	sound.play()
 	
 	reflection.can_move = false
