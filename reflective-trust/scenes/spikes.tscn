@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://blaoc63wncyco"]
+
+[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_5pg7g"]
+[ext_resource type="Script" uid="uid://bl7sbygjv8048" path="res://scripts/spikes.gd" id="1_xbcdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uisl"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
+
+[node name="Spikes" type="StaticBody2D" unique_id=1274487235]
+collision_layer = 48
+collision_mask = 5
+script = ExtResource("1_xbcdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514720841]
+modulate = Color(0.8734652, 0, 0.23799393, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_5pg7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551530586]
+shape = SubResource("RectangleShape2D_0uisl")
+debug_color = Color(0.9855427, 0.099394284, 0.16944408, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=396495092]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1023999533]
+shape = SubResource("RectangleShape2D_ijygm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

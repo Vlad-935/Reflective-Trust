@@ -11,7 +11,7 @@ size = Vector2(16, 16)
 
 [node name="Moveable_Object" type="AnimatableBody2D" unique_id=901920368 groups=["moveable"]]
 collision_layer = 20
-collision_mask = 15
+collision_mask = 39
 sync_to_physics = false
 script = ExtResource("1_sbsyn")
 
@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_ijygm")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1585686691]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 39
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1167184355]
 shape = SubResource("RectangleShape2D_hjf4h")

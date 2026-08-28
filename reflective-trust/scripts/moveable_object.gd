@@ -49,7 +49,6 @@ func move_object(distance):
 		var shadow_tween = create_tween()
 		shadow_tween.tween_property(Shadow, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 		
-		
 
 	var tween = create_tween()
 	tween.tween_property(Sprite, "global_position", self.global_position, MOVE_DURATION).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
