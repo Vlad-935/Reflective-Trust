@@ -24,19 +24,21 @@ func _physics_process(_delta: float) -> void:
 
 func _player_setup():
 	# Selecting Character
-	if PlayerData.Character == "Isa":
-		if move_multiplier == Vector2(1,1):
-			$"Vlad - Sprite".hide()
-		else:
-			$"Isa - Sprite".hide()
-			Sprite = get_node("Vlad - Sprite")
+	var player_sprite
+	var reflection_sprite
 	
+	if PlayerData.Character == "Isa":
+		player_sprite = $"Isa - Sprite"
+		reflection_sprite = $"Vlad - Sprite"
 	else:
-		if move_multiplier == Vector2(1,1):
-			$"Isa - Sprite".hide()
-		else:
-			$"Vlad - Sprite".hide()
-			Sprite = get_node("Isa - Sprite")
+		player_sprite = $"Vlad - Sprite"
+		reflection_sprite = $"Isa - Sprite"
+		
+	if move_multiplier == Vector2(1,1):
+		reflection_sprite.queue_free()
+	else:
+		player_sprite.queue_free()
+		Sprite = reflection_sprite
 	
 	# Mirroring the distance
 	global_position = INITIAL_POSITION * move_multiplier

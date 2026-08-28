@@ -19,5 +19,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	var reflection = body.get_parent().get_node("Player_Reflection")
 	body = reflection.get_parent().get_node("Player")
-	reflection.queue_free()
-	body.queue_free()
+	
+	# Blood
+	body.find_child("CPU*").emitting = true
+	reflection.find_child("CPU*").emitting = true
+	
+	reflection.find_child("*Sprite").hide()
+	body.find_child("*Sprite").hide()
