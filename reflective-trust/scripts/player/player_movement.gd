@@ -13,6 +13,8 @@ var direction: Vector2 = Vector2.ZERO
 
 @onready var Sprite: AnimatedSprite2D = get_node(PlayerData.Character + " - Sprite")
 
+var tiles: int = 0
+
 func _ready() -> void:
 	_player_setup()
 
@@ -110,3 +112,18 @@ func _get_collisions():
 		collisions[raycast_direction] = collision
 	
 	return collisions
+
+
+func on_shadow_entered():
+	tiles += 1
+	call_deferred("update_effect")
+
+func on_shadow_exited():
+	tiles -= 1
+	call_deferred("update_effect")
+
+func update_effect():
+	if tiles > 0:
+		Sprite.material.set_shader_parameter("active", true)
+	else:
+		Sprite.material.set_shader_parameter("active", false)

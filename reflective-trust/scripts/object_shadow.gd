@@ -13,8 +13,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if body.is_dead:
 			return
 			
-		var Sprite = body.find_child("*Sprite")
-		Sprite.material.set_shader_parameter("active", true)
+		body.on_shadow_entered()
 		return
 		
 	body.get_node("Sprite2D").hide()
@@ -38,8 +37,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		if body.is_dead:
 			return
 			
-		var Sprite = body.find_child("*Sprite")
-		Sprite.material.set_shader_parameter("active", false)
+		body.on_shadow_exited()
 		return
 	
 	body.get_node("Sprite2D").show()
