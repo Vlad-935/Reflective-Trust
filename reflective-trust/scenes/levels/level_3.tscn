@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://b7e50f4df7wa3"]
+[gd_scene format=4 uid="uid://cya6h4idwasw"]
 
 [ext_resource type="Script" uid="uid://c1ba0pgcqnlk7" path="res://scripts/level_1.gd" id="1_pimnq"]
 [ext_resource type="Texture2D" uid="uid://bx35frgeed8r4" path="res://assests/sprites/Background/Ground_no_crack.png" id="2_2bnyt"]
