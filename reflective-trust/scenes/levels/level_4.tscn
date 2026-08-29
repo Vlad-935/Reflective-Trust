@@ -132,7 +132,7 @@ position = Vector2(192, 32)
 INITIAL_POSITION = Vector2(192, 32)
 
 [node name="Spikes7" parent="Spikes" unique_id=1803884244 instance=ExtResource("6_fcb7b")]
-position = Vector2(224, 30)
+position = Vector2(224, 32)
 INITIAL_POSITION = Vector2(224, 32)
 
 [node name="Spikes2" parent="Spikes" unique_id=439291400 instance=ExtResource("6_fcb7b")]

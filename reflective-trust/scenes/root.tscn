@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://bnymvvxplc7ah"]
 
+[ext_resource type="Script" uid="uid://ds8tr5ihc1k3u" path="res://scripts/cursor.gd" id="1_jh1ax"]
 [ext_resource type="PackedScene" uid="uid://n461l8yo7wjj" path="res://scenes/camera.tscn" id="1_sqa0i"]
 [ext_resource type="PackedScene" uid="uid://bu2425gbk22en" path="res://scenes/ui/pause_menu.tscn" id="4_sqa0i"]
 [ext_resource type="PackedScene" uid="uid://7w3wrujreg2s" path="res://scenes/ui/main_screen.tscn" id="5_jh1ax"]
 
 [node name="Root" type="Node2D" unique_id=1105190067]
+
+[node name="Cursor" type="Node2D" parent="." unique_id=33610887]
+script = ExtResource("1_jh1ax")
 
 [node name="Camera2D" parent="." unique_id=288577738 instance=ExtResource("1_sqa0i")]
 unique_name_in_owner = true
