@@ -151,8 +151,8 @@ INITIAL_POSITION = Vector2(192, 0)
 [node name="Doors" type="Node2D" parent="." unique_id=43413500]
 
 [node name="Door" parent="Doors" unique_id=631447732 instance=ExtResource("7_apo5x")]
-position = Vector2(128, -64)
-INITIAL_POSITION = Vector2(128, -64)
+position = Vector2(128, -96)
+INITIAL_POSITION = Vector2(128, -96)
 
 [node name="Walls" type="Node2D" parent="." unique_id=206211615]
 
@@ -167,5 +167,5 @@ move_multiplier = Vector2(-1, 1)
 
 [node name="Player" parent="." unique_id=655855357 instance=ExtResource("9_lgrx1")]
 unique_name_in_owner = true
-position = Vector2(128, 96)
-INITIAL_POSITION = Vector2(128, 96)
+position = Vector2(128, 128)
+INITIAL_POSITION = Vector2(128, 128)

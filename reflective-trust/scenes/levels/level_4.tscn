@@ -151,8 +151,8 @@ INITIAL_POSITION = Vector2(192, 32)
 [node name="Doors" type="Node2D" parent="." unique_id=43413500]
 
 [node name="Door" parent="Doors" unique_id=631447732 instance=ExtResource("7_ov8fk")]
-position = Vector2(128, 96)
-INITIAL_POSITION = Vector2(128, 96)
+position = Vector2(128, 128)
+INITIAL_POSITION = Vector2(128, 128)
 
 [node name="Walls" type="Node2D" parent="." unique_id=206211615]
 
