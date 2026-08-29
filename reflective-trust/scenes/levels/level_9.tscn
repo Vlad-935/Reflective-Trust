@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://basjug80j3gos" path="res://assests/sprites/Background/Crack 3.png" id="4_xev4b"]
 [ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="5_xev4b"]
 [ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="6_v1y24"]
+[ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_xampj"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="7_ylwrn"]
 [ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="8_c68rt"]
 
@@ -62,6 +63,15 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_kj523")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xev4b"]
+texture = ExtResource("6_xampj")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v1y24"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_xev4b")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxtv"]
 texture = ExtResource("4_xampj")
@@ -123,6 +133,11 @@ tile_set = SubResource("TileSet_b7r0f")
 position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAD///v/AAAAAAAAAAD///z/AAAAAAEAAAD///3/AAAAAAEAAAD///7/AAAAAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_xampj")
+
+[node name="Mirror Glare" type="TileMapLayer" parent="Map" unique_id=1598617037]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD//wIAAAAAAAAAAAD///7/AAAAAAAAAAD///z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_v1y24")
 
 [node name="Walls" type="TileMapLayer" parent="Map" unique_id=237547136 groups=["wall"]]
 texture_filter = 1
