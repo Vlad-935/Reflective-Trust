@@ -3,16 +3,21 @@
 [ext_resource type="Script" uid="uid://bvme4bsi6vdnj" path="res://scripts/player/player_movement.gd" id="1_v6fml"]
 [ext_resource type="Shader" uid="uid://c8tq2vpx1gc3s" path="res://assests/shaders/black_and_white.gdshader" id="1_y4r1p"]
 [ext_resource type="Script" uid="uid://c6epshc3pgdi8" path="res://scripts/player/player_state_machine.gd" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://bul0gnc022mn7" path="res://assests/sprites/Isa/Isa.png" id="3_fjrip"]
-[ext_resource type="Texture2D" uid="uid://daxq3q26fxjvi" path="res://assests/sprites/Isa/Side Walk/ISA Side 1.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://daxq3q26fxjvi" path="res://assests/sprites/Isa/Walk/Side/ISA Side 1.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dmceqad5krfbf" path="res://assests/sprites/Isa/Idle/Back/Isa 1.png" id="4_pf23h"]
 [ext_resource type="Texture2D" uid="uid://dgcljtc6qlhdw" path="res://assests/sprites/Isa/Idle/Front/Isa 1.png" id="4_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://d04msoto4vu7t" path="res://assests/sprites/Isa/Side Walk/ISA Side 2.png" id="5_smehm"]
+[ext_resource type="Texture2D" uid="uid://c1xd2ms8vkc4m" path="res://assests/sprites/Isa/Idle/Back/Isa 2.png" id="5_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://d04msoto4vu7t" path="res://assests/sprites/Isa/Walk/Side/ISA Side 2.png" id="5_smehm"]
 [ext_resource type="Texture2D" uid="uid://cp5ywsqiyjtkf" path="res://assests/sprites/Isa/Idle/Front/Isa 2.png" id="5_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://drvvg53hqdyqu" path="res://assests/sprites/Isa/Side Walk/ISA side 3.png" id="6_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://drvvg53hqdyqu" path="res://assests/sprites/Isa/Walk/Side/ISA side 3.png" id="6_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://cj5pqaocmlfi0" path="res://assests/sprites/Isa/Walk/Back/Isa 1.png" id="9_wqfne"]
 [ext_resource type="Texture2D" uid="uid://b2cerehny4r11" path="res://assests/sprites/Vlad/Idle/Back/Vlad 1.png" id="10_4ni07"]
 [ext_resource type="Texture2D" uid="uid://byo3qf8hr76pu" path="res://assests/sprites/Vlad/Idle/Front/Vlad 1.png" id="10_oprun"]
+[ext_resource type="Texture2D" uid="uid://dr3ej3r4qbfg0" path="res://assests/sprites/Isa/Walk/Back/Isa 2.png" id="10_wnwbv"]
 [ext_resource type="Texture2D" uid="uid://d1ewkapp5lh1v" path="res://assests/sprites/Vlad/Idle/Front/Vlad 2.png" id="11_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://rdgljdaxa30e" path="res://assests/sprites/Isa/Walk/Front/Isa 1.png" id="11_gl8cc"]
 [ext_resource type="Texture2D" uid="uid://dxqjtijmsdunu" path="res://assests/sprites/Vlad/Idle/Back/Vlad 2.png" id="11_l71n6"]
+[ext_resource type="Texture2D" uid="uid://7318otcvbd7u" path="res://assests/sprites/Isa/Walk/Front/Isa 2.png" id="12_487ah"]
 [ext_resource type="Texture2D" uid="uid://cbyafes0fkhs8" path="res://assests/sprites/Vlad/Idle/Side/Vlad 1.png" id="12_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://ccsrphxj1lmon" path="res://assests/sprites/Vlad/Walk/Side/Vlad 1.png" id="13_fulsm"]
 [ext_resource type="Texture2D" uid="uid://drgjpemxy05of" path="res://assests/sprites/Vlad/Walk/Side/Vlad 2.png" id="14_4r5pv"]
@@ -32,7 +37,10 @@ shader_parameter/active = false
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_fjrip")
+"texture": ExtResource("4_pf23h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dt7fs")
 }],
 "loop": 1,
 "name": &"idle_back",
@@ -59,24 +67,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_ur7pv")
+"texture": ExtResource("9_wqfne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wnwbv")
 }],
 "loop": 1,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_fjrip")
+"texture": ExtResource("11_gl8cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_487ah")
 }],
 "loop": 1,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_fjrip")
-}, {
 "duration": 1.0,
 "texture": ExtResource("5_smehm")
 }, {
@@ -85,6 +96,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_ur7pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fjrip")
 }],
 "loop": 1,
 "name": &"walk_side",
@@ -188,7 +202,7 @@ scale = Vector2(0.075, 0.075)
 sprite_frames = SubResource("SpriteFrames_ijygm")
 animation = &"walk_side"
 autoplay = "idle_front"
-frame_progress = 0.74476635
+frame_progress = 0.7548568
 
 [node name="Vlad - Sprite" type="AnimatedSprite2D" parent="." unique_id=1551633672]
 material = SubResource("ShaderMaterial_d2wvv")
@@ -197,7 +211,7 @@ scale = Vector2(0.075, 0.075)
 sprite_frames = SubResource("SpriteFrames_hjf4h")
 animation = &"idle_back"
 autoplay = "idle_front"
-frame_progress = 0.044289682
+frame_progress = 0.07844472
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=47020811]
 shape = SubResource("RectangleShape2D_p0vlq")

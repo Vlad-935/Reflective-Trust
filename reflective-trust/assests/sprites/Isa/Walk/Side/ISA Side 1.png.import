@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drvvg53hqdyqu"
-path="res://.godot/imported/ISA side 3.png-2ab9756fe720e4796ef030ad9bafcabd.ctex"
+uid="uid://daxq3q26fxjvi"
+path="res://.godot/imported/ISA Side 1.png-f8b98bd06cf252e55262884133d9c512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/sprites/Isa/Side Walk/ISA side 3.png"
-dest_files=["res://.godot/imported/ISA side 3.png-2ab9756fe720e4796ef030ad9bafcabd.ctex"]
+source_file="res://assests/sprites/Isa/Walk/Side/ISA Side 1.png"
+dest_files=["res://.godot/imported/ISA Side 1.png-f8b98bd06cf252e55262884133d9c512.ctex"]
 
 [params]
 
