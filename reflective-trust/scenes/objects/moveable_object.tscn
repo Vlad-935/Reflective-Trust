@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvkyebfwai1k0"]
 
-[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_fygij"]
 [ext_resource type="Script" uid="uid://d0ow13ofspu1h" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
+[ext_resource type="Texture2D" uid="uid://deos2e6hk3cb2" path="res://assests/sprites/Objects/Wood Crate.png" id="2_f12b7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(32, 32)
@@ -16,9 +16,7 @@ sync_to_physics = false
 script = ExtResource("1_sbsyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984777450]
-modulate = Color(1, 0.84313726, 0, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_fygij")
+texture = ExtResource("2_f12b7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
 shape = SubResource("RectangleShape2D_ijygm")

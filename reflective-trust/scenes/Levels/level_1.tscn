@@ -115,7 +115,6 @@ color = Color(0, 0, 0, 0.19607843)
 [node name="Objects" type="Node2D" parent="." unique_id=840091501]
 
 [node name="Moveable_Object" parent="Objects" unique_id=1409220653 instance=ExtResource("2_3ydyl")]
-modulate = Color(0.1812501, 1, 0, 1)
 position = Vector2(224, 32)
 INITIAL_POSITION = Vector2(224, 32)
 
