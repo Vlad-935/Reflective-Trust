@@ -20,7 +20,7 @@ func restart_level():
 
 
 func change_level():
-	if is_changing_level:
+	if is_changing_level or is_restarting:
 		return
 	
 	is_changing_level = true

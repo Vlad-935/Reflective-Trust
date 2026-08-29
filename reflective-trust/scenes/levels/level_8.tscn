@@ -115,12 +115,16 @@ color = Color(0, 0, 0, 0.19607843)
 [node name="Objects" type="Node2D" parent="." unique_id=1600244550]
 
 [node name="Moveable_Object" parent="Objects" unique_id=901920368 instance=ExtResource("5_hsvsk")]
-position = Vector2(64, 32)
-INITIAL_POSITION = Vector2(64, 32)
+position = Vector2(160, 0)
+INITIAL_POSITION = Vector2(160, 0)
+
+[node name="Moveable_Object3" parent="Objects" unique_id=1664970766 instance=ExtResource("5_hsvsk")]
+position = Vector2(160, 32)
+INITIAL_POSITION = Vector2(160, 32)
 
 [node name="Moveable_Object2" parent="Objects" unique_id=662952918 instance=ExtResource("5_hsvsk")]
-position = Vector2(128, 32)
-INITIAL_POSITION = Vector2(128, 32)
+position = Vector2(96, -64)
+INITIAL_POSITION = Vector2(96, -64)
 
 [node name="Spikes" type="Node2D" parent="." unique_id=135123093]
 
@@ -132,21 +136,13 @@ INITIAL_POSITION = Vector2(96, -32)
 position = Vector2(64, -32)
 INITIAL_POSITION = Vector2(64, -32)
 
-[node name="Spikes2" parent="Spikes" unique_id=2132462874 instance=ExtResource("6_fcb7b")]
-position = Vector2(32, -32)
-INITIAL_POSITION = Vector2(32, -32)
-
-[node name="Spikes9" parent="Spikes" unique_id=1534575484 instance=ExtResource("6_fcb7b")]
-position = Vector2(128, -64)
-INITIAL_POSITION = Vector2(128, -64)
-
 [node name="Spikes5" parent="Spikes" unique_id=271020738 instance=ExtResource("6_fcb7b")]
 position = Vector2(192, -32)
 INITIAL_POSITION = Vector2(192, -32)
 
 [node name="Spikes11" parent="Spikes" unique_id=404009226 instance=ExtResource("6_fcb7b")]
-position = Vector2(224, -32)
-INITIAL_POSITION = Vector2(224, -32)
+position = Vector2(128, -32)
+INITIAL_POSITION = Vector2(128, -32)
 
 [node name="Spikes6" parent="Spikes" unique_id=489454812 instance=ExtResource("6_fcb7b")]
 position = Vector2(160, -32)
@@ -156,33 +152,89 @@ INITIAL_POSITION = Vector2(160, -32)
 position = Vector2(96, 0)
 INITIAL_POSITION = Vector2(96, 0)
 
-[node name="Spikes8" parent="Spikes" unique_id=1934771856 instance=ExtResource("6_fcb7b")]
-position = Vector2(96, 32)
-INITIAL_POSITION = Vector2(96, 32)
+[node name="Spikes9" parent="Spikes" unique_id=318669486 instance=ExtResource("6_fcb7b")]
+position = Vector2(64, 0)
+INITIAL_POSITION = Vector2(64, 0)
 
-[node name="Spikes10" parent="Spikes" unique_id=2054180607 instance=ExtResource("6_fcb7b")]
-position = Vector2(160, 32)
-INITIAL_POSITION = Vector2(160, 32)
+[node name="Spikes13" parent="Spikes" unique_id=2036703199 instance=ExtResource("6_fcb7b")]
+position = Vector2(32, 0)
+INITIAL_POSITION = Vector2(32, 0)
+
+[node name="Spikes8" parent="Spikes" unique_id=1934771856 instance=ExtResource("6_fcb7b")]
+position = Vector2(192, 32)
+INITIAL_POSITION = Vector2(192, 32)
+
+[node name="Spikes15" parent="Spikes" unique_id=522027828 instance=ExtResource("6_fcb7b")]
+position = Vector2(64, 96)
+INITIAL_POSITION = Vector2(64, 96)
+
+[node name="Spikes17" parent="Spikes" unique_id=834564761 instance=ExtResource("6_fcb7b")]
+position = Vector2(96, 96)
+INITIAL_POSITION = Vector2(96, 96)
+
+[node name="Spikes18" parent="Spikes" unique_id=1459564794 instance=ExtResource("6_fcb7b")]
+position = Vector2(128, 96)
+INITIAL_POSITION = Vector2(128, 96)
+
+[node name="Spikes19" parent="Spikes" unique_id=880323266 instance=ExtResource("6_fcb7b")]
+position = Vector2(160, 96)
+INITIAL_POSITION = Vector2(160, 96)
+
+[node name="Spikes22" parent="Spikes" unique_id=1896548985 instance=ExtResource("6_fcb7b")]
+position = Vector2(160, 128)
+INITIAL_POSITION = Vector2(160, 128)
+
+[node name="Spikes20" parent="Spikes" unique_id=407330585 instance=ExtResource("6_fcb7b")]
+position = Vector2(192, 96)
+INITIAL_POSITION = Vector2(192, 96)
+
+[node name="Spikes23" parent="Spikes" unique_id=438638252 instance=ExtResource("6_fcb7b")]
+position = Vector2(192, 128)
+INITIAL_POSITION = Vector2(192, 128)
+
+[node name="Spikes21" parent="Spikes" unique_id=1348961412 instance=ExtResource("6_fcb7b")]
+position = Vector2(224, 96)
+INITIAL_POSITION = Vector2(224, 96)
+
+[node name="Spikes24" parent="Spikes" unique_id=2008454192 instance=ExtResource("6_fcb7b")]
+position = Vector2(224, 128)
+INITIAL_POSITION = Vector2(224, 128)
+
+[node name="Spikes16" parent="Spikes" unique_id=1946141171 instance=ExtResource("6_fcb7b")]
+position = Vector2(32, 128)
+INITIAL_POSITION = Vector2(32, 128)
+
+[node name="Spikes12" parent="Spikes" unique_id=1760968791 instance=ExtResource("6_fcb7b")]
+position = Vector2(128, 32)
+INITIAL_POSITION = Vector2(128, 32)
+
+[node name="Spikes14" parent="Spikes" unique_id=168112757 instance=ExtResource("6_fcb7b")]
+position = Vector2(224, 32)
+INITIAL_POSITION = Vector2(224, 32)
+
+[node name="Spikes25" parent="Spikes" unique_id=352426156 instance=ExtResource("6_fcb7b")]
+position = Vector2(224, 32)
+INITIAL_POSITION = Vector2(224, 32)
 
 [node name="Doors" type="Node2D" parent="." unique_id=43413500]
 
 [node name="Door" parent="Doors" unique_id=631447732 instance=ExtResource("7_ov8fk")]
-position = Vector2(128, -96)
-INITIAL_POSITION = Vector2(128, -96)
+position = Vector2(128, 128)
+INITIAL_POSITION = Vector2(128, 128)
 
 [node name="Walls" type="Node2D" parent="." unique_id=206211615]
 
-[node name="Wall" parent="Walls" unique_id=842118338 instance=ExtResource("8_pmra4")]
-position = Vector2(64, 96)
-INITIAL_POSITION = Vector2(64, 96)
-
-[node name="Wall2" parent="Walls" unique_id=181667213 instance=ExtResource("8_pmra4")]
-position = Vector2(64, 64)
-INITIAL_POSITION = Vector2(64, 64)
-
 [node name="Wall4" parent="Walls" unique_id=263724677 instance=ExtResource("8_pmra4")]
-position = Vector2(224, 0)
-INITIAL_POSITION = Vector2(224, 0)
+position = Vector2(160, -96)
+INITIAL_POSITION = Vector2(160, -96)
+
+[node name="Wall5" parent="Walls" unique_id=181667213 instance=ExtResource("8_pmra4")]
+position = Vector2(224, -32)
+INITIAL_POSITION = Vector2(224, -32)
+
+[node name="Wall6" parent="Walls" unique_id=119821183 instance=ExtResource("8_pmra4")]
+position = Vector2(192, 64)
+INITIAL_POSITION = Vector2(192, 64)
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("9_1bx01")]
 unique_name_in_owner = true
@@ -192,5 +244,5 @@ move_multiplier = Vector2(-1, 1)
 
 [node name="Player" parent="." unique_id=655855357 instance=ExtResource("9_1bx01")]
 unique_name_in_owner = true
-position = Vector2(128, 128)
-INITIAL_POSITION = Vector2(128, 128)
+position = Vector2(128, -96)
+INITIAL_POSITION = Vector2(128, -96)
