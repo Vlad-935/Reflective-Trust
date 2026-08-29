@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ibyg4ja2balx" path="res://assests/sprites/Background/Mirror.png" id="4_hkd47"]
 [ext_resource type="Texture2D" uid="uid://bdr1c22g0kibi" path="res://assests/sprites/Background/Outer_walls.png" id="4_p7cwj"]
 [ext_resource type="PackedScene" uid="uid://bvkyebfwai1k0" path="res://scenes/objects/moveable_object.tscn" id="5_5db3f"]
+[ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_p7cwj"]
 [ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_r3n8r"]
 [ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="7_ko8rk"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="8_gttrq"]
@@ -63,6 +64,15 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_hvxp4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5db3f"]
+texture = ExtResource("6_p7cwj")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_r3n8r"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_5db3f")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxtv"]
 texture = ExtResource("4_p7cwj")
@@ -124,6 +134,11 @@ tile_set = SubResource("TileSet_n3gcc")
 position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAD///v/AAAAAAAAAAD///z/AAAAAAEAAAD///3/AAAAAAEAAAD///7/AAAAAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_p7cwj")
+
+[node name="Mirror Glare" type="TileMapLayer" parent="Map" unique_id=1540615357]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD//wIAAAAAAAAAAAD///7/AAAAAAAAAAD///z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_r3n8r")
 
 [node name="Walls" type="TileMapLayer" parent="Map" unique_id=237547136 groups=["wall"]]
 texture_filter = 1

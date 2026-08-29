@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://basjug80j3gos" path="res://assests/sprites/Background/Crack 3.png" id="4_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://bvkyebfwai1k0" path="res://scenes/objects/moveable_object.tscn" id="5_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_st48t"]
+[ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_wreli"]
 [ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="7_dfn7m"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="8_8rm7r"]
 [ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="9_c64tk"]
@@ -63,6 +64,15 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_ivh0c")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymk4h"]
+texture = ExtResource("6_wreli")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_st48t"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ymk4h")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxtv"]
 texture = ExtResource("4_wreli")
@@ -124,6 +134,11 @@ tile_set = SubResource("TileSet_c64tk")
 position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAD///v/AAAAAAAAAAD///z/AAAAAAEAAAD///3/AAAAAAEAAAD///7/AAAAAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_wreli")
+
+[node name="Mirror Glare" type="TileMapLayer" parent="Map" unique_id=182983920]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD//wIAAAAAAAAAAAD///7/AAAAAAAAAAD///z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_st48t")
 
 [node name="Walls" type="TileMapLayer" parent="Map" unique_id=237547136 groups=["wall"]]
 texture_filter = 1
