@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bok743utqpc5g"]
+
+[sub_resource type="Curve" id="Curve_ijygm"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, -360), 0.0, 0.0, 0, 0, Vector2(0.9854369, 360), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_hjf4h"]
+_data = [Vector2(0, 0.50000006), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Particles" type="CPUParticles2D" unique_id=758883745]
+amount = 50
+lifetime = 2.0
+speed_scale = 1.5
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 20.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 70.0
+initial_velocity_max = 100.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+angular_velocity_curve = SubResource("Curve_ijygm")
+linear_accel_min = 8.75
+linear_accel_max = 8.75
+scale_amount_min = 2.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_hjf4h")
+color = Color(0.96167356, 0.96875, 0.4026367, 1)
