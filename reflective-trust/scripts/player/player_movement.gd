@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const INITIAL_POSITION = Vector2(32,0)
+@export var INITIAL_POSITION = Vector2(32,0)
 
 const STEP = 32
 const MOVE_DURATION = 1
@@ -42,7 +42,8 @@ func _player_setup():
 		Sprite = reflection_sprite
 	
 	# Mirroring the distance
-	global_position = INITIAL_POSITION * move_multiplier
+	var player = get_parent().get_node("Player")
+	global_position = player.INITIAL_POSITION * move_multiplier
 	
 	# Setting up the direction direction of the raycasts
 	var Raycasts: Node2D = get_node("Raycasts")
