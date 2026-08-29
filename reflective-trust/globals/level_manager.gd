@@ -5,6 +5,7 @@ var is_changing_level: bool = false
 var is_restarting: bool = false
 
 var level_path: String = "res://scenes/levels/level_"
+var end_game_path: PackedScene = preload("res://scenes/ui/end_screen.tscn")
 
 @onready var Root: Node2D = get_parent().get_node("Root")
 
@@ -21,6 +22,10 @@ func restart_level():
 
 func change_level():
 	if is_changing_level or is_restarting:
+		return
+	
+	if current_level == 10:
+		load_end_game_scene()
 		return
 	
 	is_changing_level = true
@@ -48,6 +53,17 @@ func change_scene():
 
 	Loading.fade_out()
 
+
+func load_end_game_scene():
+	# Change Scene
+	get_tree().change_scene_to_packed(end_game_path)
+	
+	# Change Audio
+	AudioManager.audio_scene.stream = AudioManager.end_game_song
+	AudioManager.audio_scene.play()
+
+	# Free Mouse
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("reset level"):

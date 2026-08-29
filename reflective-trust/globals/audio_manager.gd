@@ -8,6 +8,7 @@ var audio_scene
 
 @onready var main_menu_song = preload("res://assests/audio/music/Main Menu Song.mp3")
 @onready var game_song = preload("res://assests/audio/music/Density & Time - MAZE  NO COPYRIGHT 8-bit Music.mp3")
+@onready var end_game_song = preload("res://assests/audio/music/End Credits Song.mp3")
 
 @onready var Audio_Streamer: PackedScene = preload("res://scenes/music.tscn")
 
