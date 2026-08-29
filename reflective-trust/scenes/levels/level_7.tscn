@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c1ba0pgcqnlk7" path="res://scripts/level_1.gd" id="1_sjq8i"]
 [ext_resource type="Texture2D" uid="uid://bx35frgeed8r4" path="res://assests/sprites/Background/Ground_no_crack.png" id="2_q0wsq"]
 [ext_resource type="Texture2D" uid="uid://ij6f0q3lljbq" path="res://assests/sprites/Background/Ground.png" id="3_ivh0c"]
+[ext_resource type="Texture2D" uid="uid://ibyg4ja2balx" path="res://assests/sprites/Background/Mirror.png" id="4_q0wsq"]
 [ext_resource type="Texture2D" uid="uid://bdr1c22g0kibi" path="res://assests/sprites/Background/Outer_walls.png" id="4_wreli"]
 [ext_resource type="PackedScene" uid="uid://bvkyebfwai1k0" path="res://scenes/objects/moveable_object.tscn" id="5_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_st48t"]
@@ -43,6 +44,21 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_nt80m"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_qsp8v")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivh0c"]
+texture = ExtResource("4_q0wsq")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_wreli"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_ivh0c")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxtv"]
 texture = ExtResource("4_wreli")
@@ -95,10 +111,15 @@ position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAD5/wEAAAABAAEAAAAAAAIAAAABAAEAAAACAAAAAAABAAEAAAD9//3/AAABAAEAAGD8/wIAAAABAAEAAFD5//7/AAABAAEAAFAEAP//AAABAAEAAGACAAEAAAABAAEAAAAEAP7/AAABAAEAAGA=")
 tile_set = SubResource("TileSet_nt80m")
 
+[node name="Mirror" type="TileMapLayer" parent="Map" unique_id=690389350]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD///v/AAAAAAAAAAD///z/AAAAAAEAAAD///3/AAAAAAEAAAD///7/AAAAAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAIAAAA=")
+tile_set = SubResource("TileSet_wreli")
+
 [node name="Walls" type="TileMapLayer" parent="Map" unique_id=237547136 groups=["wall"]]
 texture_filter = 1
 position = Vector2(-8, -8)
-tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQABAAAAAAD6//v/AQABAAAAAAD7//v/AQABAAAAAAD8//v/AQABAAAAAAD9//v/AQABAAAAAAD+//v/AQABAAAAAAD///v/AQABAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAACAPv/AQABAAAAAAADAPv/AQABAAAAAAAEAPv/AQABAAAAAAAFAPv/AQABAAAAAAAGAPv/AQABAAAAAAD3/wMAAQAAAAEAAAD3/wIAAQAAAAEAAAD3/wEAAQAAAAEAAAD3/wAAAQAAAAEAAAD3////AQAAAAEAAAD3//7/AQAAAAEAAAD3//3/AQAAAAEAAAD3//z/AQAAAAEAAAD3/wQAAQAAAAIAAAD4/wQAAQABAAIAAAD5/wQAAQABAAIAAAD6/wQAAQABAAIAAAD7/wQAAQABAAIAAAD8/wQAAQABAAIAAAD9/wQAAQABAAIAAAD+/wQAAQABAAIAAAD//wQAAQABAAIAAAAAAAQAAQABAAIAAAABAAQAAQABAAIAAAACAAQAAQABAAIAAAADAAQAAQABAAIAAAAEAAQAAQABAAIAAAAFAAQAAQABAAIAAAAGAAQAAQABAAIAAAAHAPv/AQACAAAAAAAHAPz/AQACAAEAAAAHAP3/AQACAAEAAAAHAP7/AQACAAEAAAAHAP//AQACAAEAAAAHAAAAAQACAAEAAAAHAAEAAQACAAEAAAAHAAIAAQACAAEAAAAHAAMAAQACAAEAAAAHAAQAAQACAAIAAAD///z/AQAAAAEAAAD///3/AQAAAAEAAAD///7/AQAAAAEAAAD/////AQAAAAEAAAD//wAAAQAAAAEAAAD//wEAAQAAAAEAAAD//wIAAQAAAAEAAAD//wMAAQAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQABAAAAAAD6//v/AQABAAAAAAD7//v/AQABAAAAAAD8//v/AQABAAAAAAD9//v/AQABAAAAAAD+//v/AQABAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAACAPv/AQABAAAAAAADAPv/AQABAAAAAAAEAPv/AQABAAAAAAAFAPv/AQABAAAAAAAGAPv/AQABAAAAAAD3/wMAAQAAAAEAAAD3/wIAAQAAAAEAAAD3/wEAAQAAAAEAAAD3/wAAAQAAAAEAAAD3////AQAAAAEAAAD3//7/AQAAAAEAAAD3//3/AQAAAAEAAAD3//z/AQAAAAEAAAD3/wQAAQAAAAIAAAD4/wQAAQABAAIAAAD5/wQAAQABAAIAAAD6/wQAAQABAAIAAAD7/wQAAQABAAIAAAD8/wQAAQABAAIAAAD9/wQAAQABAAIAAAD+/wQAAQABAAIAAAAAAAQAAQABAAIAAAABAAQAAQABAAIAAAACAAQAAQABAAIAAAADAAQAAQABAAIAAAAEAAQAAQABAAIAAAAFAAQAAQABAAIAAAAGAAQAAQABAAIAAAAHAPv/AQACAAAAAAAHAPz/AQACAAEAAAAHAP3/AQACAAEAAAAHAP7/AQACAAEAAAAHAP//AQACAAEAAAAHAAAAAQACAAEAAAAHAAEAAQACAAEAAAAHAAIAAQACAAEAAAAHAAMAAQACAAEAAAAHAAQAAQACAAIAAAA=")
 tile_set = SubResource("TileSet_tv7cl")
 
 [node name="Shadow" type="ColorRect" parent="Map" unique_id=999500530]
