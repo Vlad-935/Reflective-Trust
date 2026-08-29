@@ -162,7 +162,8 @@ INITIAL_POSITION = Vector2(32, -32)
 
 [node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("9_lgrx1")]
 unique_name_in_owner = true
-position = Vector2(-95, 2)
+position = Vector2(-112, 124)
+INITIAL_POSITION = Vector2(128, 128)
 move_multiplier = Vector2(-1, 1)
 
 [node name="Player" parent="." unique_id=655855357 instance=ExtResource("9_lgrx1")]
