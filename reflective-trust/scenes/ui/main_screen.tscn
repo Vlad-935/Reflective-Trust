@@ -51,14 +51,17 @@ layout_mode = 2
 theme = ExtResource("1_1ws2m")
 
 [node name="Label" type="Label" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=432091987]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-text = "Game Title"
+theme_override_font_sizes/font_size = 40
+text = "Reflective Trust"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="HSeparator" type="HSeparator" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=1790958471]
 layout_mode = 2
-theme_override_constants/separation = 75
+theme_override_constants/separation = 50
 theme_override_styles/separator = SubResource("StyleBoxLine_ijygm")
 
 [node name="Play" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=825698153 instance=ExtResource("2_wxjlq")]
