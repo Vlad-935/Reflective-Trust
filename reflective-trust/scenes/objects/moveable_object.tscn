@@ -10,7 +10,6 @@ size = Vector2(32, 32)
 size = Vector2(16, 16)
 
 [node name="Moveable_Object" type="AnimatableBody2D" unique_id=901920368 groups=["moveable"]]
-modulate = Color(0.1812501, 1, 0, 1)
 collision_layer = 20
 collision_mask = 0
 sync_to_physics = false

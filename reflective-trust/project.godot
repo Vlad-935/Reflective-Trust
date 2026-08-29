@@ -88,4 +88,7 @@ pause={
 
 [rendering]
 
+rendering_device/staging_buffer/texture_upload_region_size_px=32
+rendering_device/staging_buffer/texture_download_region_size_px=32
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
