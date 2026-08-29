@@ -161,7 +161,7 @@ INITIAL_POSITION = Vector2(96, -64)
 
 [node name="Wall5" parent="Walls" unique_id=842118338 instance=ExtResource("8_pmra4")]
 position = Vector2(128, 32)
-INITIAL_POSITION = Vector2(96, -64)
+INITIAL_POSITION = Vector2(128, 32)
 
 [node name="Wall2" parent="Walls" unique_id=921241150 instance=ExtResource("8_pmra4")]
 position = Vector2(160, -96)
