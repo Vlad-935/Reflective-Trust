@@ -24,7 +24,7 @@ func change_level():
 	if is_changing_level or is_restarting:
 		return
 	
-	if current_level == 10:
+	if current_level == 11:
 		load_end_game_scene()
 		return
 	
