@@ -7,14 +7,17 @@ var is_in_options: bool = false
 
 func _ready() -> void:
 	_hide_options()
-	_resume_game()
 
 func _pause_game():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
 	get_tree().paused = true
 	show()
 
 
 func _resume_game():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 	get_tree().paused = false
 	hide()
 

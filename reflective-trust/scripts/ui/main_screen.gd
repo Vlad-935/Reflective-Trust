@@ -10,6 +10,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
 	DisplayManager.can_be_paused = false
 	Main_Screen.show()
 	Player_Select.hide()
@@ -50,6 +52,9 @@ func _start_game():
 	# Delete main screen
 	self.queue_free()
 	DisplayManager.can_be_paused = true
+	
+	# Hide Mouse
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	Loading.fade_out()
 
