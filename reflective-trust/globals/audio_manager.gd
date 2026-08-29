@@ -4,10 +4,22 @@ var master_volume: float = 1.0
 var music_volume: float = 1.0
 var sound_volume: float = 1.0
 
+var audio_scene
+
+@onready var main_menu_song = preload("res://assests/audio/music/Main Menu Song.mp3")
+@onready var game_song = preload("res://assests/audio/music/Density & Time - MAZE  NO COPYRIGHT 8-bit Music.mp3")
+
+@onready var Audio_Streamer: PackedScene = preload("res://scenes/music.tscn")
+
 func _ready() -> void:
 	set_master_volume(master_volume)
 	set_music_volume(music_volume)
 	set_sound_volume(sound_volume)
+
+	audio_scene = Audio_Streamer.instantiate()
+	add_child(audio_scene)
+	audio_scene.stream = main_menu_song
+	audio_scene.play()
 
 
 func set_master_volume(value):

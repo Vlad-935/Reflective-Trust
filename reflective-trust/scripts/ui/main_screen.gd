@@ -56,6 +56,10 @@ func _start_game():
 	# Hide Mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
+	# Change Music
+	AudioManager.audio_scene.stream = AudioManager.game_song
+	AudioManager.audio_scene.play()
+	
 	Loading.fade_out()
 
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cg2j2m72idkem"]
+
+[ext_resource type="AudioStream" uid="uid://b0jh83f6qjrgf" path="res://assests/audio/music/Main Menu Song.mp3" id="1_05ggv"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1323290783]
+stream = ExtResource("1_05ggv")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
