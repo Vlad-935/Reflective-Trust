@@ -77,6 +77,7 @@ theme_override_font_sizes/font_size = 45
 text = "Quit"
 
 [node name="Options" type="PanelContainer" parent="." unique_id=506219680]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,6 +97,7 @@ color = Color(0, 0, 0, 0.39215687)
 layout_mode = 2
 
 [node name="Player_Select" type="CenterContainer" parent="." unique_id=403956508]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
