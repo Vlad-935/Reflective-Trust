@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjxqei5nhc62x"]
 
 [ext_resource type="Script" uid="uid://dfm60w0ugswqk" path="res://scripts/wall.gd" id="1_2ktk7"]
-[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="1_wykyb"]
+[ext_resource type="Texture2D" uid="uid://dejwq6thgttqx" path="res://assests/sprites/Objects/Metal Crate.png" id="2_2yst1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(32, 32)
@@ -11,9 +11,7 @@ collision_layer = 18
 script = ExtResource("1_2ktk7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=735997631]
-modulate = Color(0.9499998, 0, 1, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_wykyb")
+texture = ExtResource("2_2yst1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97686575]
 shape = SubResource("RectangleShape2D_ijygm")
