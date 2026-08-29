@@ -8,6 +8,7 @@ const MOVE_DURATION = 0.3
 var is_moving: bool = false
 
 var is_mirrored: bool = false
+var has_shadow: bool = false
 var move_multiplier: Vector2 = Vector2(1,1)
 
 # Nodes

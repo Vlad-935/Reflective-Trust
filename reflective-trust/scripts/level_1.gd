@@ -27,6 +27,7 @@ func _duplicate_objects(folder, add_shadow):
 
 func _mirrored_setup(reflection, child, add_shadow):
 	reflection.is_mirrored = true
+	reflection.has_shadow = add_shadow
 	
 	# Sprite
 	reflection.find_child("Sprite2D").flip_h = true

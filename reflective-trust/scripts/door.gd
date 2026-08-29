@@ -5,6 +5,7 @@ const SCALE_DURATION = 1.5
 @export var INITIAL_POSITION = Vector2(64,-64)
 
 var is_mirrored: bool = false
+var has_shadow: bool = false
 var move_multiplier: Vector2 = Vector2.ZERO
 
 func _ready() -> void:

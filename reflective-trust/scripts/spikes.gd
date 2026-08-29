@@ -3,6 +3,7 @@ extends StaticBody2D
 @export var INITIAL_POSITION = Vector2(64,-64)
 
 var is_mirrored: bool = false
+var has_shadow: bool = false
 var move_multiplier: Vector2 = Vector2.ZERO
 
 @onready var Root: Node2D = get_tree().get_root().get_node("Root")

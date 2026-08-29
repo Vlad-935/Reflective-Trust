@@ -44,7 +44,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_qxy0u")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8va5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_excbq"]
 texture = ExtResource("2_oc4kc")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -67,7 +67,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_fkdrv"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
-sources/1 = SubResource("TileSetAtlasSource_s8va5")
+sources/1 = SubResource("TileSetAtlasSource_excbq")
 
 [node name="Level_1" type="Node2D" unique_id=480054498]
 script = ExtResource("1_3ydyl")
@@ -105,7 +105,7 @@ tile_set = SubResource("TileSet_fkdrv")
 z_index = 20
 offset_left = -24.0
 offset_top = 600.0
-offset_right = 317.554
+offset_right = 958.9159
 offset_bottom = 1800.0
 rotation = 3.1415927
 size_flags_horizontal = 4
