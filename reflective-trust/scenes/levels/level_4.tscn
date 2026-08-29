@@ -1,16 +1,16 @@
-[gd_scene format=4 uid="uid://c3qhcaug5prky"]
+[gd_scene format=4 uid="uid://b3ppotkuamfqf"]
 
-[ext_resource type="Script" uid="uid://c1ba0pgcqnlk7" path="res://scripts/level_1.gd" id="1_um320"]
-[ext_resource type="Texture2D" uid="uid://bx35frgeed8r4" path="res://assests/sprites/Background/Ground_no_crack.png" id="2_glw47"]
-[ext_resource type="Texture2D" uid="uid://ij6f0q3lljbq" path="res://assests/sprites/Background/Ground.png" id="3_4wsov"]
-[ext_resource type="Texture2D" uid="uid://bdr1c22g0kibi" path="res://assests/sprites/Background/Outer_walls.png" id="4_qvnao"]
-[ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_fcb7b"]
-[ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="7_ov8fk"]
-[ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="8_pmra4"]
-[ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="9_1bx01"]
+[ext_resource type="Script" uid="uid://c1ba0pgcqnlk7" path="res://scripts/level_1.gd" id="1_vvoq0"]
+[ext_resource type="Texture2D" uid="uid://bx35frgeed8r4" path="res://assests/sprites/Background/Ground_no_crack.png" id="2_tqnj0"]
+[ext_resource type="Texture2D" uid="uid://ij6f0q3lljbq" path="res://assests/sprites/Background/Ground.png" id="3_dwyms"]
+[ext_resource type="Texture2D" uid="uid://bdr1c22g0kibi" path="res://assests/sprites/Background/Outer_walls.png" id="4_6xwso"]
+[ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_j14br"]
+[ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="7_0y7y4"]
+[ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="8_gruok"]
+[ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="9_h717f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qukl"]
-texture = ExtResource("2_glw47")
+texture = ExtResource("2_tqnj0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -27,7 +27,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_8qukl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp8v"]
-texture = ExtResource("3_4wsov")
+texture = ExtResource("3_dwyms")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -44,7 +44,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_qsp8v")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brxtv"]
-texture = ExtResource("4_qvnao")
+texture = ExtResource("4_6xwso")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -69,7 +69,7 @@ physics_layer_0/collision_layer = 2
 sources/1 = SubResource("TileSetAtlasSource_brxtv")
 
 [node name="Level_4" type="Node2D" unique_id=656693154]
-script = ExtResource("1_um320")
+script = ExtResource("1_vvoq0")
 
 [node name="Map" type="Node2D" parent="." unique_id=158552969]
 position = Vector2(24, 24)
@@ -115,69 +115,69 @@ color = Color(0, 0, 0, 0.19607843)
 
 [node name="Spikes" type="Node2D" parent="." unique_id=135123093]
 
-[node name="Spikes" parent="Spikes" unique_id=1274487235 instance=ExtResource("6_fcb7b")]
+[node name="Spikes" parent="Spikes" unique_id=1274487235 instance=ExtResource("6_j14br")]
 position = Vector2(96, 32)
 INITIAL_POSITION = Vector2(96, 32)
 
-[node name="Spikes4" parent="Spikes" unique_id=1182377362 instance=ExtResource("6_fcb7b")]
+[node name="Spikes4" parent="Spikes" unique_id=1182377362 instance=ExtResource("6_j14br")]
 position = Vector2(160, 32)
 INITIAL_POSITION = Vector2(160, 32)
 
-[node name="Spikes5" parent="Spikes" unique_id=271020738 instance=ExtResource("6_fcb7b")]
+[node name="Spikes5" parent="Spikes" unique_id=271020738 instance=ExtResource("6_j14br")]
 position = Vector2(192, 32)
 INITIAL_POSITION = Vector2(192, 32)
 
-[node name="Spikes6" parent="Spikes" unique_id=489454812 instance=ExtResource("6_fcb7b")]
+[node name="Spikes6" parent="Spikes" unique_id=489454812 instance=ExtResource("6_j14br")]
 position = Vector2(192, 32)
 INITIAL_POSITION = Vector2(192, 32)
 
-[node name="Spikes7" parent="Spikes" unique_id=1803884244 instance=ExtResource("6_fcb7b")]
+[node name="Spikes7" parent="Spikes" unique_id=1803884244 instance=ExtResource("6_j14br")]
 position = Vector2(224, 32)
 INITIAL_POSITION = Vector2(224, 32)
 
-[node name="Spikes2" parent="Spikes" unique_id=439291400 instance=ExtResource("6_fcb7b")]
+[node name="Spikes2" parent="Spikes" unique_id=439291400 instance=ExtResource("6_j14br")]
 position = Vector2(64, 32)
 INITIAL_POSITION = Vector2(64, 32)
 
-[node name="Spikes3" parent="Spikes" unique_id=1281760203 instance=ExtResource("6_fcb7b")]
+[node name="Spikes3" parent="Spikes" unique_id=1281760203 instance=ExtResource("6_j14br")]
 position = Vector2(32, 32)
 INITIAL_POSITION = Vector2(32, 32)
 
 [node name="Doors" type="Node2D" parent="." unique_id=43413500]
 
-[node name="Door" parent="Doors" unique_id=631447732 instance=ExtResource("7_ov8fk")]
+[node name="Door" parent="Doors" unique_id=631447732 instance=ExtResource("7_0y7y4")]
 position = Vector2(128, 128)
 INITIAL_POSITION = Vector2(128, 128)
 
 [node name="Walls" type="Node2D" parent="." unique_id=206211615]
 
-[node name="Wall" parent="Walls" unique_id=181667213 instance=ExtResource("8_pmra4")]
+[node name="Wall" parent="Walls" unique_id=181667213 instance=ExtResource("8_gruok")]
 position = Vector2(96, -96)
 INITIAL_POSITION = Vector2(96, -96)
 
-[node name="Wall3" parent="Walls" unique_id=1415087648 instance=ExtResource("8_pmra4")]
+[node name="Wall3" parent="Walls" unique_id=1415087648 instance=ExtResource("8_gruok")]
 position = Vector2(96, -64)
 INITIAL_POSITION = Vector2(96, -64)
 
-[node name="Wall5" parent="Walls" unique_id=842118338 instance=ExtResource("8_pmra4")]
+[node name="Wall5" parent="Walls" unique_id=842118338 instance=ExtResource("8_gruok")]
 position = Vector2(128, 32)
 INITIAL_POSITION = Vector2(128, 32)
 
-[node name="Wall2" parent="Walls" unique_id=921241150 instance=ExtResource("8_pmra4")]
+[node name="Wall2" parent="Walls" unique_id=921241150 instance=ExtResource("8_gruok")]
 position = Vector2(160, -96)
 INITIAL_POSITION = Vector2(160, -96)
 
-[node name="Wall4" parent="Walls" unique_id=347946534 instance=ExtResource("8_pmra4")]
+[node name="Wall4" parent="Walls" unique_id=347946534 instance=ExtResource("8_gruok")]
 position = Vector2(160, -64)
 INITIAL_POSITION = Vector2(160, -64)
 
-[node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("9_1bx01")]
+[node name="Player_Reflection" parent="." unique_id=2030126838 instance=ExtResource("9_h717f")]
 unique_name_in_owner = true
 position = Vector2(-128, -96)
 INITIAL_POSITION = Vector2(128, -96)
 move_multiplier = Vector2(-1, 1)
 
-[node name="Player" parent="." unique_id=655855357 instance=ExtResource("9_1bx01")]
+[node name="Player" parent="." unique_id=655855357 instance=ExtResource("9_h717f")]
 unique_name_in_owner = true
 position = Vector2(128, -96)
 INITIAL_POSITION = Vector2(128, -96)

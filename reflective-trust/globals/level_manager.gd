@@ -52,3 +52,7 @@ func change_scene():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("reset level"):
 		restart_level()
+	
+	if event.is_action_pressed("ui_accept"):
+		change_level()
+	

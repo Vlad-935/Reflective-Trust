@@ -31,7 +31,6 @@ DisplayManager="*uid://bwnlll6xmsosq"
 [display]
 
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="uid://chd8d4xjiqh3j"
 
 [global_group]
 
