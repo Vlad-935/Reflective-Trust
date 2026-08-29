@@ -19,7 +19,7 @@ position = Vector2(0, 16)
 stream = ExtResource("3_jh1ax")
 autoplay = true
 bus = &"Music"
-parameters/looping = false
+parameters/looping = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1431016636]
 
