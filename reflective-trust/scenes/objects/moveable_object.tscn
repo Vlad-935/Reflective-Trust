@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0ow13ofspu1h" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
 [ext_resource type="Texture2D" uid="uid://deos2e6hk3cb2" path="res://assests/sprites/Objects/Wood Crate.png" id="2_f12b7"]
+[ext_resource type="PackedScene" uid="uid://diyt1t2hws7fn" path="res://scenes/objects/hideable.tscn" id="3_7w1o0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(32, 32)
@@ -21,6 +22,8 @@ texture = ExtResource("2_f12b7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1523430818]
 shape = SubResource("RectangleShape2D_ijygm")
 debug_color = Color(0.087500095, 1, 0, 0.41960785)
+
+[node name="Hideable" parent="." unique_id=679835402 instance=ExtResource("3_7w1o0")]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1585686691]
 collision_layer = 4

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfm60w0ugswqk" path="res://scripts/wall.gd" id="1_2ktk7"]
 [ext_resource type="Texture2D" uid="uid://dejwq6thgttqx" path="res://assests/sprites/Objects/Metal Crate.png" id="2_2yst1"]
+[ext_resource type="PackedScene" uid="uid://diyt1t2hws7fn" path="res://scenes/objects/hideable.tscn" id="3_rt6j4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(32, 32)
@@ -16,3 +17,5 @@ texture = ExtResource("2_2yst1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97686575]
 shape = SubResource("RectangleShape2D_ijygm")
 debug_color = Color(0.5, 0.3554883, 0.028124988, 0.41960785)
+
+[node name="Hideable" parent="." unique_id=679835402 instance=ExtResource("3_rt6j4")]

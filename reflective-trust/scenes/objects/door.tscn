@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b35dy3s8oygd1" path="res://scripts/door.gd" id="1_uvdjg"]
 [ext_resource type="Texture2D" uid="uid://ck84wi12sisoa" path="res://assests/sprites/Objects/Door.png" id="2_uw3m6"]
+[ext_resource type="PackedScene" uid="uid://diyt1t2hws7fn" path="res://scenes/objects/hideable.tscn" id="3_xm0wp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
 size = Vector2(32, 32)
@@ -19,6 +20,8 @@ texture = ExtResource("2_uw3m6")
 modulate = Color(1, 1, 0, 1)
 shape = SubResource("RectangleShape2D_ijygm")
 debug_color = Color(0.5747303, 0.70196074, 0, 0.41960785)
+
+[node name="Hideable" parent="." unique_id=679835402 instance=ExtResource("3_xm0wp")]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1540632331]
 collision_layer = 32

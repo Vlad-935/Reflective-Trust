@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bl7sbygjv8048" path="res://scripts/spikes.gd" id="1_xbcdo"]
 [ext_resource type="Texture2D" uid="uid://botxxjpwb5u8s" path="res://assests/sprites/Objects/Spikes.png" id="2_tkv1w"]
+[ext_resource type="PackedScene" uid="uid://diyt1t2hws7fn" path="res://scenes/objects/hideable.tscn" id="3_y7a2x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uisl"]
 size = Vector2(32, 32)
@@ -18,6 +19,8 @@ texture = ExtResource("2_tkv1w")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551530586]
 shape = SubResource("RectangleShape2D_0uisl")
 debug_color = Color(0.9855427, 0.099394284, 0.16944408, 0.41960785)
+
+[node name="Hideable" parent="." unique_id=679835402 instance=ExtResource("3_y7a2x")]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=396495092]
 collision_layer = 32

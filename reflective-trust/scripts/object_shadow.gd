@@ -15,12 +15,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			
 		body.on_shadow_entered()
 		return
-		
-	body.get_node("Sprite2D").hide()
 	
-	# Disable Shadow
-	if body.has_shadow:
-		body.get_node("Shadow").get_node("Area2D").set_collision_mask_value(1, false)
+	var hideable = body.get_node("Hideable")
+	if hideable != null:
+		print(body, " ", Moveable_Object, hideable.shadows_overlap)
+		hideable.hide_by_shadow()
 	
 	if body.is_in_group("moveable"):
 		body.set_collision_layer_value(3, false)
@@ -32,6 +31,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body == Moveable_Object:
+		return
+	
 	# Change Color for Player
 	if body.is_in_group("player"):
 		if body.is_dead:
@@ -40,11 +42,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		body.on_shadow_exited()
 		return
 	
-	body.get_node("Sprite2D").show()
-	
-	# Enable Shadow
-	if body.has_shadow:
-		body.get_node("Shadow").get_node("Area2D").set_collision_mask_value(1, true)
+	var hideable = body.get_node("Hideable")
+	if hideable != null:
+		hideable.show_by_shadow()
 	
 	# Enable Objects
 	if body.is_in_group("moveable"):
