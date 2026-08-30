@@ -163,10 +163,10 @@ position = Vector2(-24, -24)
 
 [node name="Label2" type="Label" parent="Map/Text" unique_id=805564388]
 custom_minimum_size = Vector2(200, 0)
-offset_left = -227.0
-offset_top = -78.0
-offset_right = -27.0
-offset_bottom = -20.0
+offset_left = 35.0
+offset_top = -76.0
+offset_right = 235.0
+offset_bottom = -18.0
 theme = ExtResource("8_f6egh")
 theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
 theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
