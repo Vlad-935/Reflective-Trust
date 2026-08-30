@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Win Sound.mp3-6d7b520caa22632dcb1f3d4d764a580
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/End Credits Song.mp3-99c3546196080b3db329092f
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

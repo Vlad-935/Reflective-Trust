@@ -21,6 +21,7 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	Story.start_story()
+	Main_Screen.hide()
 
 func _on_options_pressed() -> void:
 	Main_Screen.hide()
@@ -60,6 +61,7 @@ func _start_game():
 	AudioManager.audio_scene.stream = AudioManager.game_song
 	AudioManager.audio_scene.play()
 	
+	LevelManager.current_level = 1
 	Loading.fade_out()
 
 

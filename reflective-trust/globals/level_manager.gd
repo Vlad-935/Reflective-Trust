@@ -1,6 +1,6 @@
 extends Node
 
-var current_level: int = 1
+var current_level: int = 0
 var is_changing_level: bool = false
 var is_restarting: bool = false
 
@@ -71,3 +71,6 @@ func load_end_game_scene():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("reset level"):
 		restart_level()
+		
+	if event.is_action_pressed("Skip Level") and current_level >= 1 and current_level <= 11:
+		change_level()
