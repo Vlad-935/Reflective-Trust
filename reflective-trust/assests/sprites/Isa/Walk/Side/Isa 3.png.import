@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drvvg53hqdyqu"
-path="res://.godot/imported/ISA side 3.png-39b6354c403803c6b99359d9294bfa10.ctex"
+path="res://.godot/imported/Isa 3.png-59567e8033e33fb3c11ae8a57212a0bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/sprites/Isa/Walk/Side/ISA side 3.png"
-dest_files=["res://.godot/imported/ISA side 3.png-39b6354c403803c6b99359d9294bfa10.ctex"]
+source_file="res://assests/sprites/Isa/Walk/Side/Isa 3.png"
+dest_files=["res://.godot/imported/Isa 3.png-59567e8033e33fb3c11ae8a57212a0bc.ctex"]
 
 [params]
 
