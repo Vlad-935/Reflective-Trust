@@ -5,6 +5,7 @@ extends Control
 @onready var first_level_scene: PackedScene = preload("res://scenes/levels/level_1.tscn") 
 
 @onready var Main_Screen: AspectRatioContainer = $MainScreen
+@onready var Story: CenterContainer = $Story
 @onready var Player_Select: CenterContainer = $Player_Select
 @onready var Options: PanelContainer = $Options
 
@@ -19,8 +20,7 @@ func _ready() -> void:
 
 
 func _on_play_pressed() -> void:
-	Player_Select.show()
-
+	Story.start_story()
 
 func _on_options_pressed() -> void:
 	Main_Screen.hide()
