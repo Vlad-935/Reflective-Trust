@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bok743utqpc5g"]
 
+[ext_resource type="Script" uid="uid://d1ibo6f73go2k" path="res://scripts/ui/particles.gd" id="1_bsxxs"]
+
 [sub_resource type="Curve" id="Curve_ijygm"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, -360), 0.0, 0.0, 0, 0, Vector2(0.9854369, 360), 0.0, 0.0, 0, 0]
@@ -31,3 +33,4 @@ scale_amount_min = 2.0
 scale_amount_max = 10.0
 scale_amount_curve = SubResource("Curve_hjf4h")
 color = Color(0.96167356, 0.96875, 0.4026367, 1)
+script = ExtResource("1_bsxxs")
