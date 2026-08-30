@@ -18,7 +18,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	var hideable = body.get_node("Hideable")
 	if hideable != null:
-		print(body, " ", Moveable_Object, hideable.shadows_overlap)
 		hideable.hide_by_shadow()
 	
 	if body.is_in_group("moveable"):
