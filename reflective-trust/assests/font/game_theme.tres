@@ -1,6 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://dx8tcgjkekuak"]
 
 [ext_resource type="FontFile" uid="uid://cnbec7jsvupbh" path="res://assests/font/Daydream DEMO.otf" id="1_t7obm"]
+[ext_resource type="Texture2D" uid="uid://ootrbubph2ds" path="res://assests/sprites/UI/Checkbox - Yes.png" id="2_fddtq"]
+[ext_resource type="Texture2D" uid="uid://0s2hh8ajc1r0" path="res://assests/sprites/UI/Checkbox - No.png" id="3_g25wi"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nmtsy"]
 color = Color(0.7411765, 0.14901961, 0.07058824, 1)
@@ -20,6 +22,10 @@ Button/colors/font_outline_color = Color(0.29538032, 0.03492544, 0.010899505, 1)
 Button/constants/outline_size = 40
 Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_t7obm")
+CheckBox/constants/h_separation = 30
+CheckBox/constants/icon_max_width = 40
+CheckBox/icons/checked = ExtResource("2_fddtq")
+CheckBox/icons/unchecked = ExtResource("3_g25wi")
 HBoxContainer/constants/separation = 32
 HSlider/styles/grabber_area = SubResource("StyleBoxLine_nmtsy")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_5i3rh")
