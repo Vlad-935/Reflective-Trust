@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="1_1ws2m"]
 [ext_resource type="Script" uid="uid://2eyom8u8psl" path="res://scripts/ui/main_screen.gd" id="1_wxjlq"]
+[ext_resource type="Texture2D" uid="uid://13sxeos0d3q4" path="res://assests/sprites/UI/Cover Image.png" id="2_51vel"]
 [ext_resource type="PackedScene" uid="uid://c67r7smueu28p" path="res://scenes/ui/button.tscn" id="2_wxjlq"]
 [ext_resource type="Texture2D" uid="uid://bul0gnc022mn7" path="res://assests/sprites/Isa/Isa.png" id="4_lgxmk"]
 [ext_resource type="PackedScene" uid="uid://cbmfwep8i54la" path="res://scenes/ui/options_buttons.tscn" id="4_odiyu"]
@@ -19,29 +20,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wxjlq")
 
-[node name="BG" type="ColorRect" parent="." unique_id=1966761175]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=104518929]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_51vel")
+
+[node name="MainScreen" type="AspectRatioContainer" parent="." unique_id=1761568816]
+custom_minimum_size = Vector2(450, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.765625, 0.44561768, 0.44561768, 1)
-
-[node name="MainScreen" type="PanelContainer" parent="." unique_id=379338898]
-custom_minimum_size = Vector2(450, 0)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -300.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="MainScreen" unique_id=1347923459]
-layout_mode = 2
-color = Color(0, 0, 0, 0.19607843)
 
 [node name="CenterContainer" type="CenterContainer" parent="MainScreen" unique_id=704289504]
 layout_mode = 2
@@ -51,9 +42,9 @@ layout_mode = 2
 theme = ExtResource("1_1ws2m")
 
 [node name="Label" type="Label" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=432091987]
-custom_minimum_size = Vector2(150, 100)
+custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Reflective Trust"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -61,23 +52,29 @@ autowrap_mode = 3
 
 [node name="HSeparator" type="HSeparator" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=1790958471]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 70
 theme_override_styles/separator = SubResource("StyleBoxLine_ijygm")
 
-[node name="Play" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=825698153 instance=ExtResource("2_wxjlq")]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=379132173]
+layout_mode = 2
+
+[node name="Play" parent="MainScreen/CenterContainer/VBoxContainer/VBoxContainer" unique_id=825698153 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Play"
+flat = true
 
-[node name="Options" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=265908127 instance=ExtResource("2_wxjlq")]
+[node name="Options" parent="MainScreen/CenterContainer/VBoxContainer/VBoxContainer" unique_id=265908127 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Options"
+flat = true
 
-[node name="Quit" parent="MainScreen/CenterContainer/VBoxContainer" unique_id=1353648743 instance=ExtResource("2_wxjlq")]
+[node name="Quit" parent="MainScreen/CenterContainer/VBoxContainer/VBoxContainer" unique_id=1353648743 instance=ExtResource("2_wxjlq")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Quit"
+flat = true
 
 [node name="Options" type="PanelContainer" parent="." unique_id=506219680]
 visible = false
@@ -142,9 +139,9 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options/CenterContainer/OptionsButtons/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Player_Select/HBoxContainer/Mari" to="." method="_on_mari_pressed"]
 [connection signal="pressed" from="Player_Select/HBoxContainer/Vlad" to="." method="_on_vlad_pressed"]

@@ -4,7 +4,7 @@ extends Control
 
 @onready var first_level_scene: PackedScene = preload("res://scenes/levels/level_1.tscn") 
 
-@onready var Main_Screen: PanelContainer = $MainScreen
+@onready var Main_Screen: AspectRatioContainer = $MainScreen
 @onready var Player_Select: CenterContainer = $Player_Select
 @onready var Options: PanelContainer = $Options
 
