@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cbmfwep8i54la" path="res://scenes/ui/options_buttons.tscn" id="4_odiyu"]
 [ext_resource type="Texture2D" uid="uid://p0rapd83iun0" path="res://assests/sprites/Vlad/Vlad.png" id="5_25c13"]
 [ext_resource type="Script" uid="uid://ds4qn1ooe4eyh" path="res://scripts/ui/story.gd" id="8_8g1xw"]
-[ext_resource type="Texture2D" uid="uid://7cbcocytpax0" path="res://icon.svg" id="8_s4t25"]
+[ext_resource type="Texture2D" uid="uid://cwgwgfb68cxy5" path="res://assests/sprites/Story/Frame 1.png" id="9_8g1xw"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ijygm"]
 color = Color(0, 0, 0, 0)
@@ -142,7 +142,6 @@ vertical_icon_alignment = 0
 expand_icon = true
 
 [node name="Story" type="CenterContainer" parent="." unique_id=215063887]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -157,8 +156,9 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Story" unique_id=1477305782]
-position = Vector2(984, 549)
-texture = ExtResource("8_s4t25")
+position = Vector2(960, 540)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_8g1xw")
 
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MainScreen/CenterContainer/VBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
