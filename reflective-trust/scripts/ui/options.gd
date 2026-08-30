@@ -45,7 +45,6 @@ func _on_master_changed(value):
 	AudioManager.set_master_volume(value)
 
 func _on_music_changed(value):
-	print(value)
 	AudioManager.set_music_volume(value)
 
 func _on_sound_changed(value):

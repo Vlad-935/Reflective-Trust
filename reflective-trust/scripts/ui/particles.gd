@@ -11,8 +11,3 @@ func _ready() -> void:
 	
 	global_position = Vector2(rand_x, rand_y)
 	color = Colors[randi_range(0, 4)]
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

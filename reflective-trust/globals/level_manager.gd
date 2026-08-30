@@ -56,9 +56,12 @@ func change_scene():
 
 func load_end_game_scene():
 	# Change Scene
+	await Loading.fade_in()
 	get_tree().change_scene_to_packed(end_game_path)
 	
+	
 	# Change Audio
+	await Loading.fade_out()
 	AudioManager.audio_scene.stream = AudioManager.end_game_song
 	AudioManager.audio_scene.play()
 
