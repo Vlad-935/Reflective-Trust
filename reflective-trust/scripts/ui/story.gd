@@ -3,9 +3,9 @@ extends CenterContainer
 
 @onready var Sprite: Sprite2D = $Sprite2D2
 
-var story_panel_1 = preload("res://assests/sprites/UI/Cover Image.png")
-var story_panel_2 = preload("res://icon.svg")
-var story_panel_3 = preload("res://assests/sprites/UI/Cover Image.png")
+var story_panel_1 = preload("res://assests/sprites/Story/Frame 1.png")
+var story_panel_2 = preload("res://assests/sprites/Story/Frame 2.png")
+var story_panel_3 = preload("res://assests/sprites/Story/Frame 3.png")
 
 @onready var Player_Select: CenterContainer = $"../Player_Select"
 
