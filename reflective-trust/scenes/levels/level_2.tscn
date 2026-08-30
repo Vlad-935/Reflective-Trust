@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ibyg4ja2balx" path="res://assests/sprites/Background/Mirror.png" id="4_qsp8v"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="5_ibugp"]
 [ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_brxtv"]
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="13_tv7cl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qukl"]
 texture = ExtResource("1_8qukl")
@@ -145,6 +146,39 @@ texture_filter = 1
 position = Vector2(-8, -8)
 tile_map_data = PackedByteArray("AAD3//v/AQAAAAAAAAD4//v/AQABAAAAAAD5//v/AQABAAAAAAD6//v/AQABAAAAAAD7//v/AQABAAAAAAD8//v/AQABAAAAAAD9//v/AQABAAAAAAD+//v/AQABAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAACAPv/AQABAAAAAAADAPv/AQABAAAAAAAEAPv/AQABAAAAAAAFAPv/AQABAAAAAAAGAPv/AQABAAAAAAD3/wMAAQAAAAEAAAD3/wIAAQAAAAEAAAD3/wEAAQAAAAEAAAD3/wAAAQAAAAEAAAD3////AQAAAAEAAAD3//7/AQAAAAEAAAD3//3/AQAAAAEAAAD3//z/AQAAAAEAAAD3/wQAAQAAAAIAAAD4/wQAAQABAAIAAAD5/wQAAQABAAIAAAD6/wQAAQABAAIAAAD7/wQAAQABAAIAAAD8/wQAAQABAAIAAAD9/wQAAQABAAIAAAD+/wQAAQABAAIAAAAAAAQAAQABAAIAAAABAAQAAQABAAIAAAACAAQAAQABAAIAAAADAAQAAQABAAIAAAAEAAQAAQABAAIAAAAFAAQAAQABAAIAAAAGAAQAAQABAAIAAAAHAPv/AQACAAAAAAAHAPz/AQACAAEAAAAHAP3/AQACAAEAAAAHAP7/AQACAAEAAAAHAP//AQACAAEAAAAHAAAAAQACAAEAAAAHAAEAAQACAAEAAAAHAAIAAQACAAEAAAAHAAMAAQACAAEAAAAHAAQAAQACAAIAAAA=")
 tile_set = SubResource("TileSet_tv7cl")
+
+[node name="Text" type="Node2D" parent="Map" unique_id=2017693528]
+position = Vector2(-24, -24)
+
+[node name="Label" type="Label" parent="Map/Text" unique_id=1923835825]
+offset_left = 10.0
+offset_top = 59.0
+offset_right = 250.0
+offset_bottom = 108.0
+theme = ExtResource("13_tv7cl")
+theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
+theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 10
+text = "Press \"r\" to Reset"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Map/Text" unique_id=299002958]
+custom_minimum_size = Vector2(200, 0)
+offset_left = -232.0
+offset_top = 48.0
+offset_right = -32.0
+offset_bottom = 106.0
+theme = ExtResource("13_tv7cl")
+theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
+theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 10
+text = "You can never know what's in the shadows"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Shadow" type="ColorRect" parent="Map" unique_id=999500530]
 z_index = 20

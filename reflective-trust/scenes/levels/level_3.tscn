@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_qi5uv"]
 [ext_resource type="PackedScene" uid="uid://blaoc63wncyco" path="res://scenes/objects/spikes.tscn" id="6_t4txi"]
 [ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="7_apo5x"]
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="8_f6egh"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="8_josfm"]
 [ext_resource type="PackedScene" uid="uid://efy270suy001" path="res://scenes/player.tscn" id="9_lgrx1"]
 
@@ -156,6 +157,26 @@ rotation = 3.1415927
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 0, 0, 0.19607843)
+
+[node name="Text" type="Node2D" parent="Map" unique_id=348943664]
+position = Vector2(-24, -24)
+
+[node name="Label2" type="Label" parent="Map/Text" unique_id=805564388]
+custom_minimum_size = Vector2(200, 0)
+offset_left = -227.0
+offset_top = -78.0
+offset_right = -27.0
+offset_bottom = -20.0
+theme = ExtResource("8_f6egh")
+theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
+theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 10
+text = "You can't see it
+ you can't touch it"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Objects" type="Node2D" parent="." unique_id=1600244550]
 

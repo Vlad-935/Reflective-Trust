@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://vfn64sxndcxf" path="res://assests/sprites/Background/Mirror Glare.png" id="6_iav0o"]
 [ext_resource type="PackedScene" uid="uid://bjxqei5nhc62x" path="res://scenes/objects/wall.tscn" id="6_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://lr053qqunmyp" path="res://scenes/objects/door.tscn" id="6_sk5k4"]
+[ext_resource type="Theme" uid="uid://dx8tcgjkekuak" path="res://assests/font/game_theme.tres" id="8_dnkej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dga24"]
 texture = ExtResource("2_dga24")
@@ -156,6 +157,37 @@ rotation = 3.1415927
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 0, 0, 0.19607843)
+
+[node name="Text" type="Node2D" parent="Map" unique_id=829023226]
+position = Vector2(-24, -24)
+
+[node name="Label" type="Label" parent="Map/Text" unique_id=27130233]
+offset_left = 25.0
+offset_top = 80.0
+offset_right = 130.0
+offset_bottom = 132.0
+theme = ExtResource("8_dnkej")
+theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
+theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 15
+text = "You"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Map/Text" unique_id=154211081]
+offset_left = 21.0
+offset_top = -108.0
+offset_right = 126.0
+offset_bottom = -56.0
+theme = ExtResource("8_dnkej")
+theme_override_colors/font_color = Color(0.684375, 0.52966094, 0.37854493, 1)
+theme_override_colors/font_outline_color = Color(0.4117647, 0.27450982, 0.19215687, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 15
+text = "Door"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Objects" type="Node2D" parent="." unique_id=840091501]
 
